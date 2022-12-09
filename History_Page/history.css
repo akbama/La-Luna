@@ -1,21 +1,3 @@
-body {
-    margin: 0;
-    background-color: #FAFAFA;
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    padding: 15px;
-}
-
-#title {
-    text-align: center;
-    font-weight: bold;
-    color: #393939;
-    font-size: 50px; 
-}
-
 .filter {
     width: 100%;
     height: 30%;
@@ -26,7 +8,7 @@ body {
 }
 
 input[type="date"] {
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: #EFEFEF;
     border-width: 0;
     text-align: center;
@@ -69,15 +51,15 @@ input[type="radio"]:checked {
 	font-family: inherit;
     padding-left: 20px;
 	outline: none;
-    border-radius: 50px;
-    background: url(arrow_down.png) no-repeat right #EFEFEF;
+    border-radius: 30px;
+    background: url(/Pictures/arrow_down.png) no-repeat right #EFEFEF;
     background-size: 20px;
-    background-position-x: 190px;
+    background-position-x: 160px;
 }
 
 input[type="submit"]{
     width: 15%;
-    border-radius: 50px;
+    border-radius: 25px;
     border: none;
     background-color: #F9D95E;
     height: 36px;

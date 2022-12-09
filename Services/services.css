@@ -1,0 +1,136 @@
+.customerdetailscontainer, .spaservicecontainer, .hotelcontainer{
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0px 2px 6px #CCCCCC;
+    border-radius: 35px;
+    margin-bottom: 50px;
+    padding: 30px 50px 30px 45px;
+}
+
+.customerdetailscontainer {
+    height: 30%;
+    margin-top: 50px;
+}
+
+.spaservicecontainer {
+    height: 60%;
+}
+
+.hotelcontainer {
+    height: 50%;
+}
+
+.buttons {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 25%;
+    border-radius: 25px;
+    border: none;
+    background-color: #F9D95E;
+    height: 36px;
+    font-weight: bold;
+    color: #515151;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#label {
+    font-size: 30px;
+    font-weight: 600;
+    color: #3A3A3A;
+    line-height: normal;
+}
+
+#forcustomer {
+    width: 100%;
+    height: 70%;
+    font-size: 18px;
+    table-layout: fixed;
+}
+
+#inputcustomer, #inputcustomer2 {
+    appearance: none;
+    border-radius: 30px;
+    background-color: #EFEFEF;
+    border-width: 0;
+    color: #515151;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#inputcustomer {
+    width: 100%;
+    padding-left: 30px;
+}
+
+#inputcustomer2 {
+    width: 70%;
+    text-align: center;
+}
+
+#inp {
+    text-align: center;
+}
+
+.spadetails {
+    float: left;
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+}
+
+.spapic {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+}
+
+.custom-select {
+    appearance: none;
+	padding: 5px;
+    width: 56.5%;
+	background-color: #EFEFEF;
+	color: black;
+	border: none;
+	font-family: inherit;
+    padding-left: 20px;
+	outline: none;
+    border-radius: 30px;
+    background: url(/Pictures/arrow_down.png) no-repeat right #EFEFEF;
+    background-size: 20px;
+    background-position-x: 220px;
+}
+
+#forspa {
+    width: 100%;
+    border: 1px solid black;
+    height: 40%;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-clip: content-box;
+    background-color: #3A3A3A;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+}
+
+input[type="radio"]:checked {
+    border: 4px solid #3A3A3A;
+    background-color: #F9D95E;
+  }
+
+#manualinput {
+    width: 60px;
+}
