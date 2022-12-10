@@ -52,7 +52,7 @@ input[type="radio"]:checked {
     padding-left: 20px;
 	outline: none;
     border-radius: 30px;
-    background: url(/Pictures/arrow_down.png) no-repeat right #EFEFEF;
+    background: url(../Pictures/arrow_down.png) no-repeat right #EFEFEF;
     background-size: 20px;
     background-position-x: 160px;
 }
