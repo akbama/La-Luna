@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    background-color: #FAFAFA;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    width: 60%;
+    height:  40%;
+    margin: auto;
+    border-radius: 50px;
+    background-color: #FDDA5E;
+    box-shadow: 0px 0px 6px #CCCCCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dog-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.dashboard .banner .box .text {
+    display: block;
+    align-items:center;
+}
+
+.dashboard .banner .box .text .welcome-text {
+    font-size: 5vw;
+    font-weight: 1000;
+    color: var(--text-color);
+    margin: 5px;
+}
+
+.dashboard .banner .box .text .date-text {
+    font-size: 2vw;
+    font-weight: 200;
+    color: grey;
+    margin: 5px;
+}
+
+.table {
+    width: 60%;
+    height:  40%;
+    margin: auto;
+    border-radius: 50px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 0px 6px #CCCCCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+
+.todaytitle
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FAFAFA;
+    background-color: #E1D5CA;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.tabletitle {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 0.2%;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+hr {
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.contents {
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.contents .customer {
+    
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.tg  
+{
+    border-collapse:collapse;
+    margin-left: 4.5%;
+    width: 90%;
+}
+
+.tg td
+{
+    border-color: #FAFAFA;
+    border-style:solid;
+    border-width:1px;
+    font-size:14px;
+    overflow:hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    word-break:normal;
+}
+
+
+
+.tg .tg-text1
+{
+    text-align: center;
+    vertical-align:top;
+    width: 22%;
+}
+
+.tg .tg-text2
+{
+    text-align: center;
+    vertical-align:top;
+    width: 15%;
+}
+
+.tg .tg-text3
+{
+    text-align: center;
+    vertical-align:top;
+    width: 22%;
+}
+
+.tg .tg-text4
+{
+    text-align: center;
+    vertical-align:top;
+    width: 25%;
+}
+
+.tg .tg-text5
+{
+    text-align: center;
+    vertical-align:top;
+    width: 15%;
+}
