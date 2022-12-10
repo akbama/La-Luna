@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>History</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="../Sidebar Nav/sidebar_style.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="../common design.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style = "height: 100%; width: 100%;">
+<div class="sidebar">
+  <div class="logo-details">
+  <img src="../Sidebar Nav/sidebar_logo_1.png" class="logopic1"></img>
+  <img src="../Sidebar Nav/sidebar_logo_2.png" class="logopic2"></img>
+</div>
+<ul class="nav-list">
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-clipboard-check"></i>
+      <span class="links_name">Dashboard</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-sliders"></i>
+      <span class="links_name">Admin Setting</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="links_name">Appointments</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-users"></i>
+      <span class="links_name">Customers</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-building"></i>
+      <span class="links_name">Hotel</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../History_Page/history.html">
+      <i class="fa-solid fa-folder-open"></i>
+      <span class="links_name">History</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-scissors"></i>
+      <span class="links_name">Services</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>  
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="links_name">Log Out</span>
+      <div class="active-bar"></div>
+    </a>
+  </li> 
+</ul>
+</div>
+<form action = "#">
+<div class = "container">
+    <p id = "title">Services</p>
+    <div class = "customerdetailscontainer">
+        <p id = "label">Customer Details</p>
+        <p id = "customercontent">
+            <table id = "forcustomer">
+                <tr>
+                    <td style = "width: 20%;"> Owner's Name </td>
+                    <td id = "inp"> <input type = "text" id = "inputcustomer"> </td>
+                    <td style = "width: 25%;"> &emsp;&emsp;&emsp;Date Booked </td>
+                    <td id = "inp"> <input type = "date" id = "inputcustomer2"> </td>
+                </tr>
+                <tr>
+                    <td> Pet's Name </td>
+                    <td id = "inp"> <input type = "text" id = "inputcustomer"> </td>
+                    <td> &emsp;&emsp;&emsp;Appointment Date </td>
+                    <td id = "inp"> <input type = "date" id = "inputcustomer2"> </td>
+                </tr>
+                <tr>
+                    <td> Contact Number</td>
+                    <td id = "inp"> <input type = "number" id = "inputcustomer"> </td>
+                    <td> &emsp;&emsp;&emsp;Time </td>
+                    <td id = "inp"> <input type = "time" id = "inputcustomer2"> </td>
+                </tr>
+            </table>
+             
+        </p>
+    </div>
+    <div class = "spaservicecontainer">
+        <div class = "spadetails">
+        <p id = "label">Spa Services</p>
+            <table id = "forspa">
+                <tr>
+                    <td style = "width: 30%;">Select Groomer </td>
+                    <td><select class = "custom-select">
+                        <option selected></option>
+                        <option value = "Name1">Name 1</option>
+                        <option value = "Name2">Name 2</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td> Bath Type</td>
+                    <td>
+                        <input type = "radio" id = "basic" name = "bath" value = "basic"> Basic Bath&emsp; &emsp;
+                        <input type = "radio" id = "deluxe" name = "bath" value = "deluxe"> Deluxe Bath
+                    </td>
+                </tr>
+                <tr>
+                    <td> Pet Size </td>
+                    <td>
+                        <input type = "radio" id = "small" name = "size" value = "small"> S &emsp; &emsp;
+                        <input type = "radio" id = "medium" name = "size" value = "medium"> M &emsp; &emsp;
+                        <input type = "radio" id = "large" name = "size" value = "large"> L &emsp; &emsp;
+                        <input type = "radio" id = "extralarge" name = "size" value = "extralarge"> XL &emsp; &emsp;
+                        <input type = "radio" id = "extraextralarge" name = "size" value = "extraextralarge"> XXL
+                    </td>
+                </tr>
+                <tr>
+                    <td> Discount</td>
+                    <td>
+                        <input type = "radio" id = "ten" name = "discount" value = "ten"> 10% &emsp; &emsp;
+                        <input type = "radio" id = "fifty" name = "discount" value = "fifty"> 50% &emsp; &emsp;
+                        <input type = "radio" id = "manual" name = "discount" value = ""> Manual &emsp;
+                        <input type = "number" class = "custom-select" id = "manualinput" name = "manual" onclick = "selectmanual()">
+                    </td>
+                </tr>
+            </table>
+            <p id = "label">Add-on Services</p>
+            <table id = "forAddonServices">
+              <tr>
+                <td><input type = "checkbox" id = "op1" name = "op1" value = "profstyling"> Professional Styling </td>
+                <td><input type = "checkbox" id = "op2" name = "op2" value = "detR)"> Detangling (Regular)</td>
+                
+              </tr>
+              <tr>
+                  <td><input type = "checkbox" id = "op3" name = "op3" value = "teethcleaning"> Teeth Cleaning</td>
+                  <td><input type = "checkbox" id = "op4" name = "op4" value = "detS)"> Detangling (Severe)</td>
+              </tr>
+              <tr>
+                <td><input type = "checkbox" id = "op5" name = "op5" value = "analsac"> Anal Sac Expression </td>
+                <td><input type = "checkbox" id = "op6" name = "op6" value = "deshedding)"> Deshedding</td>
+              </tr>
+              <tr>
+                <td><input type = "checkbox" id = "op7" name = "op7" value = "tfm"> Tick & Flea Meditation </td>
+                <td><input type = "checkbox" id = "op8" name = "op8" value = "luxshampoo"> Lux Whitening Shampoo</td></td>
+              </tr>                                                     
+            </table>
+        </div>
+        <div class = "spapic">
+
+        </div>
+    </div>
+    <div class = "hotelcontainer">
+            <p id = "label">Hotel</p>
+    
+    </div>
+    <div class = "buttons">
+        <input type = "submit" value = "Add Booking">
+        <input type = "submit" value = "Proceed with Payment">
+    </div>
+</form>
+</div>
+<script>
+    selectmanual = () => {
+        var radio = document.getElementById("manual");
+        radio.checked = true;
+       }
+$(document).ready(function(){
+    $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
+</body>
+</html>
