@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="services.js"></script>
 </head>
 <body style = "height: 100%; width: 100%;">
 <div class="sidebar">
@@ -79,9 +80,18 @@
   </li> 
 </ul>
 </div>
-<form action = "#">
+
+  <button class = "basketcontainer" onclick = "opencontainer()">
+      <div class = "basketimagecontainer">
+      <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+    </div>
+  </button>
+  <div id = "salescontainer">
+              
+  </div>
+  <form action = "#">
 <div class = "container">
-    <p id = "title">Services</p>
+    <p id = "title">Services</p> 
     <div class = "customerdetailscontainer">
         <p id = "label">Customer Details</p>
         <p id = "customercontent">
@@ -89,7 +99,7 @@
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
                     <td id = "inp"> <input type = "text" id = "inputcustomer"> </td>
-                    <td style = "width: 25%;"> &emsp;&emsp;&emsp;Date Booked </td>
+                    <td style = "width: 30%;"> &emsp;&emsp;&emsp;Date Booked </td>
                     <td id = "inp"> <input type = "date" id = "inputcustomer2"> </td>
                 </tr>
                 <tr>
@@ -113,7 +123,7 @@
         <p id = "label">Spa Services</p>
             <table id = "forspa">
                 <tr>
-                    <td style = "width: 30%;">Select Groomer </td>
+                    <td style = "width: 30%;"><h5>Select Groomer</h5> </td>
                     <td><select class = "custom-select">
                         <option selected></option>
                         <option value = "Name1">Name 1</option>
@@ -121,14 +131,14 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <td> Bath Type</td>
+                    <td> <h5>Bath Type</h5></td>
                     <td>
                         <input type = "radio" id = "basic" name = "bath" value = "basic"> Basic Bath&emsp; &emsp;
                         <input type = "radio" id = "deluxe" name = "bath" value = "deluxe"> Deluxe Bath
                     </td>
                 </tr>
                 <tr>
-                    <td> Pet Size </td>
+                    <td> <h5>Pet Size</h5> </td>
                     <td>
                         <input type = "radio" id = "small" name = "size" value = "small"> S &emsp; &emsp;
                         <input type = "radio" id = "medium" name = "size" value = "medium"> M &emsp; &emsp;
@@ -138,61 +148,92 @@
                     </td>
                 </tr>
                 <tr>
-                    <td> Discount</td>
+                    <td> <h5>Discount</h5></td>
                     <td>
                         <input type = "radio" id = "ten" name = "discount" value = "ten"> 10% &emsp; &emsp;
                         <input type = "radio" id = "fifty" name = "discount" value = "fifty"> 50% &emsp; &emsp;
-                        <input type = "radio" id = "manual" name = "discount" value = ""> Manual &emsp;
-                        <input type = "number" class = "custom-select" id = "manualinput" name = "manual" onclick = "selectmanual()">
+                        <input type = "radio" id = "manual" name = "discount" onclick = "selectmanual()"> Manual &emsp;
+                        <input type = "number" class = "select1" id = "manualinput" name = "manual" style = "opacity: 0.5;" disabled>
                     </td>
                 </tr>
-            </table>
+            </table> <br>
             <p id = "label">Add-on Services</p>
             <table id = "forAddonServices">
               <tr>
-                <td><input type = "checkbox" id = "op1" name = "op1" value = "profstyling"> Professional Styling </td>
-                <td><input type = "checkbox" id = "op2" name = "op2" value = "detR)"> Detangling (Regular)</td>
-                
+                <td><input type = "checkbox" id = "op1" name = "op1" value = "profstyling"> &ensp;Professional Styling </td>
+                <td><input type = "checkbox" id = "op2" name = "op2" value = "detR)"> &ensp;Detangling (Regular)</td>
               </tr>
               <tr>
-                  <td><input type = "checkbox" id = "op3" name = "op3" value = "teethcleaning"> Teeth Cleaning</td>
-                  <td><input type = "checkbox" id = "op4" name = "op4" value = "detS)"> Detangling (Severe)</td>
+                  <td><input type = "checkbox" id = "op3" name = "op3" value = "teethcleaning"> &ensp;Teeth Cleaning</td>
+                  <td><input type = "checkbox" id = "op4" name = "op4" value = "detS)"> &ensp;Detangling (Severe)</td>
               </tr>
               <tr>
-                <td><input type = "checkbox" id = "op5" name = "op5" value = "analsac"> Anal Sac Expression </td>
-                <td><input type = "checkbox" id = "op6" name = "op6" value = "deshedding)"> Deshedding</td>
+                <td><input type = "checkbox" id = "op5" name = "op5" value = "analsac"> &ensp;Anal Sac Expression </td>
+                <td><input type = "checkbox" id = "op6" name = "op6" value = "deshedding)"> &ensp;Deshedding</td>
               </tr>
               <tr>
-                <td><input type = "checkbox" id = "op7" name = "op7" value = "tfm"> Tick & Flea Meditation </td>
-                <td><input type = "checkbox" id = "op8" name = "op8" value = "luxshampoo"> Lux Whitening Shampoo</td></td>
+                <td><input type = "checkbox" id = "op7" name = "op7" value = "tfm"> &ensp;Tick & Flea Meditation </td>
+                <td><input type = "checkbox" id = "op8" name = "op8" value = "luxshampoo"> &ensp;Lux Whitening Shampoo</td></td>
               </tr>                                                     
             </table>
-        </div>
+      </div>
         <div class = "spapic">
-
+            <img id = "pic" src = "../Pictures/woman_with_dog.png">
         </div>
     </div>
     <div class = "hotelcontainer">
-            <p id = "label">Hotel</p>
-    
+        <p id = "label">Hotel</p>
+        <div class="hotelbox">
+          <div class="roombox">
+            <table id = forroom>
+              <tr>
+                <td style = "width: 45%">  <h5> Room Type</h5> </td>
+              <td>
+                <input type = "radio" id = "deluxe" name = "type" value = "deluxe"> &ensp;Deluxe <br>
+                <input type = "radio" id = "catroom" name = "type" value = "catroom"> &ensp;Cat Room <br>
+                <input type = "radio" id = "suite" name = "type" value = "suite"> &ensp;Suite <br>
+              </td>
+              </tr>
+              <tr>
+                <td> <h5>No. of night/s  </h5> </td>
+              <td>
+                <input type = "number" class = "select1" name = "nightsnum">
+              </td>
+              </tr>
+            </table>
+          </div>
+          <div class="guestbox">
+            <table id = forroom>
+              <tr>
+                <td style = "width: 45%"> <h5>Additional Guests </h5></td>
+              <td>
+                <td><input type = "checkbox" id = "ag1" name = "ag1" value = "extrag1" onclick = "extraguests1()"> &ensp;Extra Guests (S-M)<br>
+                  &ensp; &emsp;<input type = "number" class = "select2" name = "nightsnum" id = "nightsnum1" disabled style = "opacity: 0.5;"> <br>
+                <input type = "checkbox" id = "ag2" name = "ag2" value = "extrag2" style = "margin-top: 10px;" onclick="extraguests2()"> &ensp;Extra Guests (L-XXL) <br>
+                  &ensp; &emsp;<input type = "number" class = "select2" name = "nightsnum" id = "nightsnum2" disabled style = "opacity: 0.5;">
+              </td></td>
+              </tr>
+            </table>
+          </div>
+        </div> <br>
+        <p id = "label">Daycare Services</p>
+        <table id = "fordaycare">
+          <tr>
+            <td style = "width: 45%">  <h5> Pet Size</h5> </td>
+          <td>
+            <input type = "radio" id = "deluxe" name = "type" value = "deluxe"> &ensp;S-M Dog/Cat<br>
+            <input type = "radio" id = "catroom" name = "type" value = "catroom"> &ensp;X-XXL Dog
+          </td>
+          </tr>
+        </table>
     </div>
     <div class = "buttons">
         <input type = "submit" value = "Add Booking">
         <input type = "submit" value = "Proceed with Payment">
-    </div>
+</div>
 </form>
 </div>
-<script>
-    selectmanual = () => {
-        var radio = document.getElementById("manual");
-        radio.checked = true;
-       }
-$(document).ready(function(){
-    $('ul li a').click(function(){
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-});
-});
-</script>
+
+
 </body>
 </html>
