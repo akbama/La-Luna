@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
   <title>History</title>
@@ -89,7 +89,7 @@
   <div id = "salescontainer">
               
   </div>
-  <form action = "#">
+  <form action = "add_services.php" method = "POST">
 <div class = "container">
     <p id = "title">Services</p> 
     <div class = "customerdetailscontainer">
@@ -98,21 +98,21 @@
             <table id = "forcustomer">
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
-                    <td id = "inp"> <input type = "text" id = "inputcustomer"> </td>
+                    <td id = "inp"> <input type = "text" class = "inputcustomer" name = "ownername" required> </td>
                     <td style = "width: 30%;"> &emsp;&emsp;&emsp;Date Booked </td>
-                    <td id = "inp"> <input type = "date" id = "inputcustomer2"> </td>
+                    <td id = "inp"> <input type = "date" class = "inputcustomer2" name = "dateb" required> </td>
                 </tr>
                 <tr>
                     <td> Pet's Name </td>
-                    <td id = "inp"> <input type = "text" id = "inputcustomer"> </td>
+                    <td id = "inp"> <input type = "text" class = "inputcustomer" name = "petname" required> </td>
                     <td> &emsp;&emsp;&emsp;Appointment Date </td>
-                    <td id = "inp"> <input type = "date" id = "inputcustomer2"> </td>
+                    <td id = "inp"> <input type = "date" class = "inputcustomer2" name = "appdate" required> </td>
                 </tr>
                 <tr>
                     <td> Contact Number</td>
-                    <td id = "inp"> <input type = "number" id = "inputcustomer"> </td>
+                    <td id = "inp"> <input type = "number" class = "inputcustomer" name = "cnumber" required> </td>
                     <td> &emsp;&emsp;&emsp;Time </td>
-                    <td id = "inp"> <input type = "time" id = "inputcustomer2"> </td>
+                    <td id = "inp"> <input type = "time" class = "inputcustomer2" name = "time" required> </td>
                 </tr>
             </table>
              

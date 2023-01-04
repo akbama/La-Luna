@@ -57,7 +57,7 @@ input[type="submit"] {
     table-layout: fixed;
 }
 
-#inputcustomer, #inputcustomer2 {
+.inputcustomer, .inputcustomer2 {
     height: 80%;
     appearance: none;
     border-radius: 30px;
@@ -69,12 +69,12 @@ input[type="submit"] {
     padding: 5px;
 }
 
-#inputcustomer {
+.inputcustomer {
     width: 100%;
     padding-left: 30px;
 }
 
-#inputcustomer2 {
+.inputcustomer2 {
     width: 70%;
     text-align: center;
 }
