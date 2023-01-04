@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="services.js"></script>
 </head>
 <body style = "height: 100%; width: 100%;">
 <div class="sidebar">
@@ -229,11 +228,71 @@
     </div>
     <div class = "buttons">
         <input type = "submit" value = "Add Booking">
-        <input type = "submit" value = "Proceed with Payment">
+        <input type = "submit" class="btn-btn-open" value = "Proceed with Payment" >
 </div>
 </form>
-</div>
+<section class="modal hidden">
+  <div class="flex">
+  </div>
+    <!-- <button class="btn-close">⨉</button>
+  </div>
+    <div class="modal">
+   Modal content 
+    <div class="modal-content">-->
+      <div class="content">
+        <h2 class="title">Check out</h2>
+        <span class="btn-close">&times;</span>
+      <div class="modal-body">
+      <div class="form-group">
+        <label> Customer Name </label>
+            <input type="text" name="customer_name" id="customer_name" class="form-control" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label> Services </label>
+            <textarea name="services" id="services" class="form-control-services" ></textarea>
+        </div> 
+    
+    <div class="after-serv">
+        <div class="form-group">
+            <label> Discount </label>
+            <input type="text" name="discount" id="discount" class="form-control" readonly> 
+        </div>
+    
+        <div class="form-group">
+            <label> Total Amount</label>
+            <input type="text" name="total_amount" id="total_amount" class="form-control" readonly>
+        </div>
+    
+        <div class="form-group"> 
+            <label> Payment Method </label>
+            <form class="radio">
+            <input type="radio" name="payment-method" id="cash" class="form-control-radio" value = "Cash">
+            <label for="gcash" >Cash</label><br>
+            <input type="radio" name="payment-method" id="gcash" class="form-control-radio" value = "GCash">
+            <label for="gcash" >GCash</label><br>
+            <input type="radio" name="payment-method" id="paymaya" class="form-control-radio" value = "Paymaya">
+            <label for="paymaya">PayMaya</label><br>
+            <input type="radio" name="payment-method" id="banktransfer" class="form-control-radio" value = "Bank Transfer">
+            <label for="banktransfer" >Bank Transfer</label><br>
+        </form>
+      </div>
+    
+    
+        <div class="form-group" id="refnum">
+            <label class="lbl-ref"> Reference Number </label>
+            <input type="text"  name="ref-num" id="refnum" class="form-control-ref">
+        </div>
+        
+             <input type="submit" name="print-receipt" class="btn-btn-primary" value="Print Receipt"></input>
+            </div>
+      </div>
+    </div>
+</section>
 
-
+<div class="overlay hidden"></div>
+<!--<button class="btn btn-open">Open Modal</button>-->
+    <script src="services.js"></script>
+    <script src="sales.js"></script>
 </body>
 </html>
