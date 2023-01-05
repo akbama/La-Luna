@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Manila');
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -18,14 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //get the customer details
     $owners_id = $md5c;
     $owners_name = $_POST['ownername'];
-    $date_booked = $_POST['dateb'];
+    $date_booked = date('Y-m-d H:i:s');
     $pets_name = $_POST['petname'];
     $app_date = $_POST['appdate'];
     $c_number = $_POST['cnumber'];
-    $time = $_POST['time'];
 
-    $connect->query("INSERT INTO customer_details (Owners_ID, Owners_Name, Pets_Name, Contact_Number, Date_Booked, App_Date, `Time`) 
-    VALUES('$owners_id','$owners_name','$pets_name',$c_number,'$date_booked','$app_date','$time')") 
+    $connect->query("INSERT INTO customer_details (Owners_ID, Owners_Name, Pets_Name, Contact_Number, Date_Booked, App_Date) 
+    VALUES('$owners_id','$owners_name','$pets_name',$c_number,'$date_booked','$app_date')") 
     or die($connect->error);
 
     $groomer = $_POST['select_groomer'];
