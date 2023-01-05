@@ -89,7 +89,7 @@ body {
     justify-content: space-evenly;
     padding-top: 2%;
     padding-bottom: 0.2%;
-    font-size: 25px;
+    font-size: 2vw;
     font-weight: 500;
 }
 
@@ -124,7 +124,7 @@ hr {
     border-color: #FAFAFA;
     border-style:solid;
     border-width:1px;
-    font-size:14px;
+    font-size: 1.1vw;
     overflow:hidden;
     padding-top: 20px;
     padding-bottom: 20px;
