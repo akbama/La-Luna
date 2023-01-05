@@ -15,6 +15,7 @@ body
 }
 
 .header-text {
+    margin-left: 2%;
     font-size: 4.5vw;
     font-weight: bolder;
 }
@@ -29,11 +30,12 @@ body
     padding-bottom: 10%;
     padding-left: 5%;
     padding-right: 5%;
-    width: 200%;
+    width: 10vw;
     background-color: #FDDA5E;
     font-weight: bold;
+    font-size: 1vw;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .appointments{
@@ -55,12 +57,14 @@ body
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-shadow: 0px 0px 6px #CCCCCC;
 }
 
 .month{
     width: 100%;
-    height: 12rem;
+    height: 12vw;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     background-color: #E1D5CA;
@@ -73,12 +77,12 @@ body
 }
 
 .month i {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     cursor: pointer;
 }
 
 .month h1 {
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -91,12 +95,12 @@ body
 
 .weekdays {
     width: 100%;
-    height: 5rem;
+    height: 7vw;
     display: flex;
 }
 
 .weekdays div {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     font-weight: 400;
     letter-spacing: 0.1rem;
     width: calc(44.2rem/2);
@@ -113,10 +117,10 @@ body
 }
 
 .days div{
-    font-size: 1.4rem;
-    margin: 0.3rem;
-    width: calc(40.2rem/4.6);
-    height: 5rem;
+    font-size: 1.4vw;
+    margin: 0.3%;
+    width: calc(62.9%/4.6);
+    height: 7vw;
     display: flex;
     justify-content: center;
     align-items: center;
