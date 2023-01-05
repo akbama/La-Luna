@@ -86,7 +86,12 @@
     </div>
   </button>
   <div id = "salescontainer">
-              
+    <div id = "inputsalescontainer">
+      <p id="nameline"></p>
+      <p id="petnameline"></p>
+      <p id="appdateline"></p>
+      <p id="cnumberline"></p>
+    </div>
   </div>
   <form action = "add_services.php" method = "POST">
 <div class = "container">
@@ -97,21 +102,17 @@
             <table id = "forcustomer">
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
-                    <td id = "inp"> <input type = "text" class = "inputcustomer" name = "ownername" required> </td>
-                    <td style = "width: 30%;"> &emsp;&emsp;&emsp;Date Booked </td>
-                    <td id = "inp"> <input type = "date" class = "inputcustomer2" name = "dateb" required> </td>
+                    <td id = "inp"> <input type = "text" id = "oname" class = "inputcustomer" name = "ownername" required oninput="myFunction()"> </td>
+                    <td style = "width: 25%;"> &emsp;&emsp;&emsp;Appointment Date </td>
+                    <td id = "inp"> <input type = "datetime-local" id = "appdate" class = "inputcustomer2" name = "appdate" required oninput="myFunction()"> </td>
                 </tr>
                 <tr>
                     <td> Pet's Name </td>
-                    <td id = "inp"> <input type = "text" class = "inputcustomer" name = "petname" required> </td>
-                    <td> &emsp;&emsp;&emsp;Appointment Date </td>
-                    <td id = "inp"> <input type = "date" class = "inputcustomer2" name = "appdate" required> </td>
+                    <td id = "inp"> <input type = "text" id = "petn" class = "inputcustomer" name = "petname" required oninput="myFunction()"> </td>
                 </tr>
                 <tr>
                     <td> Contact Number</td>
-                    <td id = "inp"> <input type = "number" class = "inputcustomer" name = "cnumber" required> </td>
-                    <td> &emsp;&emsp;&emsp;Time </td>
-                    <td id = "inp"> <input type = "time" class = "inputcustomer2" name = "time" required> </td>
+                    <td id = "inp"> <input type = "number" id = "cnumber" class = "inputcustomer" name = "cnumber" required oninput="myFunction()"> </td>
                 </tr>
             </table>
              
@@ -294,5 +295,10 @@
 <!--<button class="btn btn-open">Open Modal</button>-->
     <script src="services.js"></script>
     <script src="sales.js"></script>
+    <script type="text/javascript">
+        var today = new Date().toISOString().slice(0, 16);
+        document.getElementsByName("appdate")[0].min = today;
+    </script>
+    <script src="addtocart.js"></script>
 </body>
 </html>
