@@ -90,10 +90,10 @@
   </div>
   <form action = "add_services.php" method = "POST">
 <div class = "container">
-    <p id = "title">Services</p> 
+    <p id = "title">Services</p>
     <div class = "customerdetailscontainer">
         <p id = "label">Customer Details</p>
-        <p id = "customercontent">
+        <p id = "customercontent"> 
             <table id = "forcustomer">
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
@@ -123,8 +123,8 @@
             <table id = "forspa">
                 <tr>
                     <td style = "width: 30%;"><h5>Select Groomer</h5> </td>
-                    <td><select class = "custom-select">
-                        <option selected></option>
+                    <td><select class = "custom-select" name = "select_groomer">
+                        <option value = "Null" selected></option>
                         <option value = "Name1">Name 1</option>
                         <option value = "Name2">Name 2</option>
                     </select></td>
@@ -149,10 +149,10 @@
                 <tr>
                     <td> <h5>Discount</h5></td>
                     <td>
-                        <input type = "radio" id = "ten" name = "discount" value = "ten"> 10% &emsp; &emsp;
-                        <input type = "radio" id = "fifty" name = "discount" value = "fifty"> 50% &emsp; &emsp;
-                        <input type = "radio" id = "manual" name = "discount" onclick = "selectmanual()"> Manual &emsp;
-                        <input type = "number" class = "select1" id = "manualinput" name = "manual" style = "opacity: 0.5;" disabled>
+                        <input type = "radio" id = "ten" name = "disc" value = "10"> 10% &emsp; &emsp;
+                        <input type = "radio" id = "fifty" name = "disc" value = "50"> 50% &emsp; &emsp;
+                        <input type = "radio" id = "manual" name = "disc" onclick = "selectmanual()"> Manual &emsp;
+                        <input type = "number" class = "select1" id = "manualinput" name = "disc" style = "opacity: 0.5;" disabled>
                     </td>
                 </tr>
             </table> <br>
@@ -160,18 +160,18 @@
             <table id = "forAddonServices">
               <tr>
                 <td><input type = "checkbox" id = "op1" name = "op1" value = "profstyling"> &ensp;Professional Styling </td>
-                <td><input type = "checkbox" id = "op2" name = "op2" value = "detR)"> &ensp;Detangling (Regular)</td>
+                <td><input type = "checkbox" id = "op2" name = "op5" value = "detR"> &ensp;Detangling (Regular)</td>
               </tr>
               <tr>
-                  <td><input type = "checkbox" id = "op3" name = "op3" value = "teethcleaning"> &ensp;Teeth Cleaning</td>
-                  <td><input type = "checkbox" id = "op4" name = "op4" value = "detS)"> &ensp;Detangling (Severe)</td>
+                  <td><input type = "checkbox" id = "op3" name = "op2" value = "teethcleaning"> &ensp;Teeth Cleaning</td>
+                  <td><input type = "checkbox" id = "op4" name = "op6" value = "detS"> &ensp;Detangling (Severe)</td>
               </tr>
               <tr>
-                <td><input type = "checkbox" id = "op5" name = "op5" value = "analsac"> &ensp;Anal Sac Expression </td>
-                <td><input type = "checkbox" id = "op6" name = "op6" value = "deshedding)"> &ensp;Deshedding</td>
+                <td><input type = "checkbox" id = "op5" name = "op3" value = "analsac"> &ensp;Anal Sac Expression </td>
+                <td><input type = "checkbox" id = "op6" name = "op7" value = "deshedding"> &ensp;Deshedding</td>
               </tr>
               <tr>
-                <td><input type = "checkbox" id = "op7" name = "op7" value = "tfm"> &ensp;Tick & Flea Meditation </td>
+                <td><input type = "checkbox" id = "op7" name = "op4" value = "tfm"> &ensp;Tick & Flea Meditation </td>
                 <td><input type = "checkbox" id = "op8" name = "op8" value = "luxshampoo"> &ensp;Lux Whitening Shampoo</td></td>
               </tr>                                                     
             </table>
@@ -206,10 +206,10 @@
               <tr>
                 <td style = "width: 45%"> <h5>Additional Guests </h5></td>
               <td>
-                <td><input type = "checkbox" id = "ag1" name = "ag1" value = "extrag1" onclick = "extraguests1()"> &ensp;Extra Guests (S-M)<br>
-                  &ensp; &emsp;<input type = "number" class = "select2" name = "nightsnum" id = "nightsnum1" disabled style = "opacity: 0.5;"> <br>
-                <input type = "checkbox" id = "ag2" name = "ag2" value = "extrag2" style = "margin-top: 10px;" onclick="extraguests2()"> &ensp;Extra Guests (L-XXL) <br>
-                  &ensp; &emsp;<input type = "number" class = "select2" name = "nightsnum" id = "nightsnum2" disabled style = "opacity: 0.5;">
+                <td><input type = "checkbox" id = "ag1" name = "ag1" onclick = "extraguests1()"> &ensp;Extra Guests (S-M)<br>
+                  &ensp; &emsp;<input type = "number" class = "select2" name = "ag1" id = "nightsnum1" disabled style = "opacity: 0.5;"> <br>
+                <input type = "checkbox" id = "ag2" name = "ag2" style = "margin-top: 10px;" onclick="extraguests2()"> &ensp;Extra Guests (L-XXL) <br>
+                  &ensp; &emsp;<input type = "number" class = "select2" name = "ag2" id = "nightsnum2" disabled style = "opacity: 0.5;">
               </td></td>
               </tr>
             </table>
@@ -220,8 +220,8 @@
           <tr>
             <td style = "width: 45%">  <h5> Pet Size</h5> </td>
           <td>
-            <input type = "radio" id = "deluxe" name = "type" value = "deluxe"> &ensp;S-M Dog/Cat<br>
-            <input type = "radio" id = "catroom" name = "type" value = "catroom"> &ensp;X-XXL Dog
+            <input type = "radio" name = "daycaretype" value = "S-M Dog/Cat"> &ensp;S-M Dog/Cat<br>
+            <input type = "radio" name = "daycaretype" value = "X-XXL Dog"> &ensp;X-XXL Dog
           </td>
           </tr>
         </table>

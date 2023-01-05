@@ -4,6 +4,7 @@ function extraguests1 () {
     if (check.checked==true) {
       text.disabled = false;
       text.style.opacity = 1;
+      text.required = true;
     }
     else {
       text.disabled = true;
@@ -16,6 +17,7 @@ function extraguests1 () {
     if (check.checked==true) {
       text.disabled = false;
       text.style.opacity = 1;
+      text.required = true;
     }
     else {
       text.disabled = true;
@@ -28,6 +30,7 @@ function extraguests1 () {
     if (radio.checked==true) {
       text.disabled = false;
       text.style.opacity = 1;
+      text.required = true;
     }
     else {
       text.disabled = true;
