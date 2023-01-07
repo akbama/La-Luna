@@ -23,7 +23,7 @@
 
 <div class='navi'>
     <button class = 'navi_btn active'>Service</button>
-    <button class = 'navi_btn active'>Groomer</button>
+    <button class = 'navi_btn'>Groomer</button>
     <button class = 'navi_btn'>Admin Details</button>
 </div>
 <div class="sidebar">
