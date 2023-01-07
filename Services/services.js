@@ -1,6 +1,6 @@
-function extraguests1 () {
-    var check = document.getElementById("ag1");
-    var text = document.getElementById("nightsnum1");
+function extraguests (a,b) {
+    var check = document.getElementById(a);
+    var text = document.getElementById(b);
     if (check.checked==true) {
       text.disabled = false;
       text.style.opacity = 1;
@@ -11,19 +11,12 @@ function extraguests1 () {
       text.style.opacity = 0.5;
     }
   }
-  function extraguests2 () {
-    var check = document.getElementById("ag2");
-    var text = document.getElementById("nightsnum2");
-    if (check.checked==true) {
-      text.disabled = false;
-      text.style.opacity = 1;
-      text.required = true;
-    }
-    else {
-      text.disabled = true;
-      text.style.opacity = 0.5;
-    }
+  function setAttr (a,b) {
+    var text = document.getElementById(a);
+    var val = document.getElementById(b).value;
+    text.setAttribute('value', val);
   }
+
   function selectmanual () {
     var radio = document.getElementById("manual");
     var text = document.getElementById("manualinput");

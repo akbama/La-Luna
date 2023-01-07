@@ -75,9 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         VALUES('$owners_id','$r_type',$n_nights,$arr2[0],$arr2[1],'$dcservices')") 
         or die($connect->error);
     }
-    
-    
-
     header("Location: services.php");   
 }
 
