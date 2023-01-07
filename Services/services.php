@@ -25,35 +25,28 @@
 </div>
 <ul class="nav-list">
   <li>
-    <a href="#">
+    <a href="../Dashboard/dashboard.html">
       <i class="fa-solid fa-clipboard-check"></i>
       <span class="links_name">Dashboard</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../Admin_2/admin_2.php">
       <i class="fa-solid fa-sliders"></i>
       <span class="links_name">Admin Setting</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../La Luna Calendar/index.html">
       <i class="fa-solid fa-calendar-days"></i>
       <span class="links_name">Appointments</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
-      <i class="fa-solid fa-users"></i>
-      <span class="links_name">Customers</span>
-      <div class="active-bar"></div>
-    </a>
-  </li>
-  <li>
-    <a href="#">
+    <a href="../Hotel/hotel.html">
       <i class="fa-solid fa-building"></i>
       <span class="links_name">Hotel</span>
       <div class="active-bar"></div>
@@ -67,7 +60,7 @@
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../Services/services.php" class='active-page'>
       <i class="fa-solid fa-scissors"></i>
       <span class="links_name">Services</span>
       <div class="active-bar"></div>
