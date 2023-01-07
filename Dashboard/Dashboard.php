@@ -25,61 +25,54 @@
 <!--SIDEBAR-->
 <div class="sidebar">
   <div class="logo-details">
-  <img src="/Sidebar Nav/sidebar_logo_1.png" class="logopic1"></img>
-  <img src="/Sidebar Nav/sidebar_logo_2.png" class="logopic2"></img>
+  <img src="../Sidebar Nav/sidebar_logo_1.png" class="logopic1"></img>
+  <img src="../Sidebar Nav/sidebar_logo_2.png" class="logopic2"></img>
 </div>
-<ul class="nav-list">
+  <ul class="nav-list">
   <li>
-    <a href="#">
+    <a href="../Dashboard/dashboard.php" class='active-page'>
       <i class="fa-solid fa-clipboard-check"></i>
       <span class="links_name">Dashboard</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../Admin_2/admin_2.php">
       <i class="fa-solid fa-sliders"></i>
-      <span class="links_name">Admin Setting</span>
+      <span class="links_name">Admin Controls</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../La Luna Calendar/calendar.php">
       <i class="fa-solid fa-calendar-days"></i>
       <span class="links_name">Appointments</span>
       <div class="active-bar"></div>
-    </a>s
-  </li>
-  <li>
-    <a href="#">
-      <i class="fa-solid fa-users"></i>
-      <span class="links_name">Customers</span>
-      <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../Hotel/hotel.php">
       <i class="fa-solid fa-building"></i>
       <span class="links_name">Hotel</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../History_Page/history.php">
       <i class="fa-solid fa-folder-open"></i>
       <span class="links_name">History</span>
       <div class="active-bar"></div>
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="../Services/services.php">
       <i class="fa-solid fa-scissors"></i>
       <span class="links_name">Services</span>
       <div class="active-bar"></div>
     </a>
   </li>  
   <li>
-    <a href="#">
+    <a href="../Login/login.php">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span class="links_name">Log Out</span>
       <div class="active-bar"></div>
@@ -93,7 +86,7 @@
     <div class="banner">
         <div class="box">
             <div class="image">
-              <img id="dog-image" src="/Pictures/business-3d-white-dog-standing.png" alt="dog-image">
+              <img id="dog-image" src="../Pictures/business-3d-white-dog-standing.png" alt="dog-image">
             </div>
             <div class="text">
               <div class="welcome-text">
