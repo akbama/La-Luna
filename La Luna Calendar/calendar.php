@@ -151,17 +151,16 @@
           <table class="tg">
             <?php 
             
-            while($row1 = $customertable->fetch_assoc()) { 
-              while($row2 = $result->fetch_assoc()){
+            while($row = $result->fetch_assoc()) { 
                 //if ($row2['Owners_ID'] == $row['Owners_ID']) {
               ?>
             <tbody>
               <tr>
-                <td class="tg-text1"><?php echo $row2['Owners_ID']; ?></td>
-                <td class="tg-text2">Brownie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">10:00 AM</td>
+                <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
+                <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
+                <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
+                <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
+                <td class="tg-text5"><?php echo $row['App_Date']; ?></td>
                 <td class="buttons">
                      <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
                     <button type="submit"><i class="fa-solid fa-pen"></i></button>
@@ -170,7 +169,7 @@
                 </td>
               </tr>
             </tbody>
-            <?php }} ?>
+            <?php } ?>
             </table>
         </div>
       </div>

@@ -11,7 +11,7 @@ if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
 }
 
-$result = $connect->query("SELECT * FROM `spa_services`") or die($connect->error);
-$customertable =  $connect->query("SELECT * FROM `customer_details`") or die($connect->error);
+$result = $connect->query("SELECT * FROM `spa_services`,`customer_details` WHERE `spa_services`.`Owners_ID`= `customer_details`.`Owners_ID`;") or die($connect->error);
+
 $connect->close();
 ?>
