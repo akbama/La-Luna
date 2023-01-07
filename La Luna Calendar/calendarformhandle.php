@@ -14,6 +14,15 @@
     $dateinput = date('Y/m/d',$clickeddate);
     ?>
        <table class="tg">
+       <tr>
+          <th>Owner</th>
+          <th>Pet</th>
+          <th>Contact</th>
+          <th>Service</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+        
             <?php 
         $result = $connect->query("SELECT * FROM `spa_services`,`customer_details` WHERE `spa_services`.`Owners_ID`= `customer_details`.`Owners_ID`;") 
         or die($connect->error);

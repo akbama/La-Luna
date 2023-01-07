@@ -22,8 +22,7 @@
 </div>
 
 <div class='navi'>
-    <button class = 'navi_btn active'>Service</button>
-    <button class = 'navi_btn'>Groomer</button>
+    <button class = 'navi_btn active'>Groomer</button>
     <button class = 'navi_btn'>Admin Details</button>
 </div>
 <div class="sidebar">
@@ -92,34 +91,22 @@
   });
   </script>
 
+<form action="logindetails_edit.php" method="POST">
 <div class='wrapper'>
     <div class='form'>
         <div class='inputfield'>
-            <label>Service Name</label>
-            <input type='text' class='input'>
+          <label>Groomer</label>
+          <input type='text' class='input'>
         </div>  
-        <div class='inputfield'>
-            <label>Price</label>
-            <input type='text' class='input'>
-        </div>  
-        <div class='inputfield radio'>
-            <label>Commission</label>
-            <label class='check'>
-            <input type='radio' checked='checked' name='commision_bool' value='yes'>
-            <span class='checkmark'></span>
-            </label>
-            <p>Yes</p>
-            <label class='check'>
-            <input type='radio' name='commision_bool' value='no'>
-            <span class='checkmark'></span>
-            </label>
-            <p>No</p>
-        </div> 
-        <div class='inputfield'>
-            <input type='submit' value='Save' class='btn'>
-        </div>
+    <div class='inputfield'>
+      <label>Commission</label>
+      <input type='text' class='input'>
+    </div>
+    <div class='inputfield'>
+      <input type='submit' value='Save' class='btn'>
     </div>
 </div>
+</form>
 
 <script src = 'admin_2.js'></script>
 	

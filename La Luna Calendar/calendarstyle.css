@@ -8,7 +8,6 @@ body
     display: flex;
     justify-content:left;
     align-items: center;
-    height: 100%;
     padding-top: 5%;
     padding-bottom: 3%;
     padding-left: 18%;
@@ -214,13 +213,12 @@ body
     border-top-right-radius: 50px;
 }
 
-.tabletitle {
-    display: flex;
-    justify-content: space-evenly;
+.th {
     padding-top: 2%;
     padding-bottom: 0.2%;
     font-size: 2vw;
     font-weight: 500;
+    text-align: initial;
 }
 
 hr {
@@ -245,8 +243,8 @@ hr {
 .tg  
 {
     border-collapse:collapse;
-    margin-left: 3%;
     width: 100%;
+    padding-left: 5%;
 }
 
 .tg td
@@ -257,44 +255,14 @@ hr {
     padding-top: 1vw;
     padding-bottom: 1vw;
     word-break:normal;
-}
-
-
-
-.tg .tg-text1
-{
     text-align: center;
     vertical-align:top;
-    width: 16%;
 }
 
-.tg .tg-text2
-{
-    text-align: center;
-    vertical-align:top;
-    width: 13%;
-}
 
-.tg .tg-text3
-{
-    text-align: center;
-    vertical-align:top;
-    width:16%;
-}
 
-.tg .tg-text4
-{
-    text-align: center;
-    vertical-align:top;
-    width: 19%;
-}
 
-.tg .tg-text5
-{
-    text-align: center;
-    vertical-align:top;
-    width: 12%;
-}
+
 
 /* SIDEBAR NAV */
 
