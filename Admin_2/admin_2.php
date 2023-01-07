@@ -32,63 +32,56 @@
     <img src="sidebar_logo_2.png" class="logopic2"></img>
   </div>
   <ul class="nav-list">
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-clipboard-check"></i>
-        <span class="links_name">Dashboard</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-sliders"></i>
-        <span class="links_name">Admin Setting</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-calendar-days"></i>
-        <span class="links_name">Appointments</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-users"></i>
-        <span class="links_name">Customers</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-building"></i>
-        <span class="links_name">Hotel</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-folder-open"></i>
-        <span class="links_name">History</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-scissors"></i>
-        <span class="links_name">Services</span>
-        <div class="active-bar"></div>
-      </a>
-    </li>  
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span class="links_name">Log Out</span>
-        <div class="active-bar"></div>
-      </a>
-    </li> 
-  </ul>
+  <li>
+    <a href="../Dashboard/dashboard.php">
+      <i class="fa-solid fa-clipboard-check"></i>
+      <span class="links_name">Dashboard</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../Admin_2/admin_2.php" class='active-page'>
+      <i class="fa-solid fa-sliders"></i>
+      <span class="links_name">Admin Controls</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../La Luna Calendar/calendar.php">
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="links_name">Appointments</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../Hotel/hotel.php">
+      <i class="fa-solid fa-building"></i>
+      <span class="links_name">Hotel</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../History_Page/history.php">
+      <i class="fa-solid fa-folder-open"></i>
+      <span class="links_name">History</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="../Services/services.php">
+      <i class="fa-solid fa-scissors"></i>
+      <span class="links_name">Services</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>  
+  <li>
+    <a href="../Login/login.php">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="links_name">Log Out</span>
+      <div class="active-bar"></div>
+    </a>
+  </li> 
+</ul>
   </div>
   <script>
   $(document).ready(function(){
