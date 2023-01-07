@@ -23,11 +23,32 @@ function myFunction3() {
     
   }
 
+function printTotal() {
+  if (document.body.contains(document.getElementById("results"))) {
+    document.getElementById("results").remove();
+  }
+  const con = document.getElementById("currenttotal");
+  var res = document.createElement("span");
+  res.setAttribute("id","results");
+  var a = document.getElementById("totalspacontainer").getAttribute('value');
+  if (a == null) a = 0;
+  var b = document.getElementById("totalhotelcontainer").getAttribute('value');
+  if (b == null) b = 0;
+  console.log (a + "and" + b);
+  var total = parseInt(a) + parseInt(b);
+  res.append(total);
+  con.appendChild(res);
+
+  con1 = document.getElementById("totalcontainer");
+  con1.setAttribute('value', con1)
+}
 function addToCart() {
     const tcontainer =  document.getElementById("totalspacontainer");
+    if (document.body.contains(document.getElementById("hotelresult"))) {
+    }
     if (document.body.contains(document.getElementById("sparesult"))) {
       document.getElementById("sparesult").remove();
-      document.getElementById("spacurrenttotal").remove();
+      tcontainer.setAttribute('value','0');
     }
     const size1_price = [300,400,500,600,700];
     const size2_price = [400,500,700,800,900];
@@ -43,7 +64,6 @@ function addToCart() {
       add_ons.push(checkboxes[i].value)
       add_ons_price.push(checkboxes[i].getAttribute('price'))
     }
-
     var groomer = document.getElementById("select_groomer").value;
     var bath = document.querySelector('input[name="bath"]:checked').value;
     var size = document.querySelector('input[name="size"]:checked').value;
@@ -103,20 +123,12 @@ function addToCart() {
       }
     }
     var temptotal = parseInt(bathprice) + parseInt(totaladdons);
-    console.log(bathprice);
-    console.log(totaladdons);
-    console.log(currenttotal);
-    console.log(" ");
+    console.log(temptotal);
     const element = document.getElementById("inputsalescontainer");
     element.appendChild(result);
 
-    const result2 = document.createElement("span");
-    result2.setAttribute("id", "spacurrenttotal");
-    result2.append(temptotal);
-    const element2 = document.getElementById("currenttotal");
-    element2.appendChild(result2);
-
     tcontainer.setAttribute('value', temptotal);
+    printTotal();
   }
 
 function addToCart2() {
@@ -130,8 +142,9 @@ function addToCart2() {
  
   if (document.body.contains(document.getElementById("hotelresult"))) {
     document.getElementById("hotelresult").remove();
-    document.getElementById("hotelcurrenttotal").remove()
     tcontainer.setAttribute('value','0');
+  }
+  if (document.body.contains(document.getElementById("sparesult"))) {
   }
 
   const result = document.createElement("div");
@@ -205,17 +218,9 @@ function addToCart2() {
     result.append(petlabel);
     temptotal += parseInt(daycareservices_price);
   }
-  temptotal += parseInt(currenttotal);
   const element = document.getElementById("inputsalescontainer");
   element.appendChild(result);
-  console.log(temptotal);
-  
-  const result2 = document.createElement("span");
-  result2.setAttribute("id", "hotelcurrenttotal");
-  result2.append(temptotal);
-  const element2 = document.getElementById("currenttotal");
-  element2.appendChild(result2);
 
   tcontainer.setAttribute('value', temptotal);
+  printTotal();
 }
-
