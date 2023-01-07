@@ -97,14 +97,6 @@ body{
 
 }
 
-#forgotpass{
-    font-weight: 200;
-    font-size: 12px;
-    position: relative;
-    left: 70;
-    top: 0;
-}
-
 #submit{
     width: 200px;
     font-size: 15px;

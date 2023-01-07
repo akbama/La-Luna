@@ -22,11 +22,6 @@
             <br>
             <input type = "password" class="form-control" name = "password" placeholder="Password" required>
             <br><br>
-            <a class="form-end" id="forgotpass" href="forgotpass.php">
-            <span>
-                Forgot password?
-            </span>
-            </a>
             <br><br>
             <input class="form-end" id="submit" type="submit" value="Continue"><br>
             <?php
