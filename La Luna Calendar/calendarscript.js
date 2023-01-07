@@ -89,9 +89,14 @@ var span = document.getElementsByClassName("close")[0];
 function clicked(id,month, year) {
   modal.style.display = "block";
   const d = new Date (year, month, id);
-  document.getElementById("date").innerHTML= d.toDateString();
-}
+  var a = d.toDateString();
+  document.getElementById("date").innerHTML= a;
 
+  var b = year + "/" + (month+1) + "/" + id;
+  $("#con").load("calendarformhandle.php", {
+    clickeddate: b
+  });
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -104,11 +109,10 @@ window.onclick = function(event) {
   }
 }
 
-
 // function to get today's date
 $(document).ready(function(){
   $('ul li a').click(function(){
     $('li a').removeClass("active");
     $(this).addClass("active");
 });
-});  
+}); 

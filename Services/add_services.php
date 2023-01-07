@@ -37,24 +37,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $spatotal = $_POST['totalspa'];
         $arr = array($_POST['op1'], $_POST['op2'], $_POST['op3'], $_POST['op4'], $_POST['op5'], $_POST['op6'], $_POST['op7'], $_POST['op8']);
         for ($i=0; $i<8;$i++){
-            if (is_null($arr[$i])==true)
-                $arr[$i] = 0;
-            else {
-                $arr[$i] = 1;
+            if (is_null($arr[$i])!=true) {
                 $flag = 1;
-            }
-                
+                $addons .= "[";
+                $addons .= $arr[$i];
+                $addons .= "] ";
+            }   
         }
+        if ($flag == 0) $addons = "Empty";
         
         $connect->query("INSERT INTO `spa_services`(`Owners_ID`, `Groomer`, `Bath_Type`, `Pet_Size`, `Discount`, `Add-on_Services`, `Spa_Total`) 
-        VALUES('$owners_id','$groomer','$b_type','$size',$discount,$flag,$spatotal)") 
+        VALUES('$owners_id','$groomer','$b_type','$size',$discount,'$addons',$spatotal)") 
         or die($connect->error);
-
-        if ($flag == 1) {
-            $connect->query("INSERT INTO `ss_add-on_services` (`Owners_ID`, `Professional Styling`, `Teeth Cleaning`, `Anal Sac Expression`, `Tick & Flea Meditation`, `Detangling Regular`, `Detangling Severe`, `Deshedding`, `Lux Whitening Shampoo`) 
-            VALUES('$owners_id',$arr[0], $arr[1], $arr[2], $arr[3], $arr[4], $arr[5], $arr[6], $arr[7])") 
-            or die($connect->error);
-        }
         
     }
     else {

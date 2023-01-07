@@ -118,7 +118,6 @@
                     <div>Fri</div>
                     <div>Sat</div>
                 </div>
-                
                 <button class="days"></button>
             </div>
         </div>
@@ -146,30 +145,8 @@
         </div>
         <hr>
         <?php include ('calendardata.php'); ?>
-        <div class="contents">
-          <table class="tg">
-            <?php 
-            
-            while($row = $result->fetch_assoc()) { 
-                //if ($row2['Owners_ID'] == $row['Owners_ID']) {
-              ?>
-            <tbody>
-              <tr>
-                <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
-                <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
-                <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
-                <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
-                <td class="tg-text5"><?php echo $row['App_Date']; ?></td>
-                <td class="buttons">
-                     <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="submit"><i class="fa-solid fa-pen"></i></button>
-                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
-             
-                </td>
-              </tr>
-            </tbody>
-            <?php } ?>
-            </table>
+        <div class="contents" id = "con">
+          
         </div>
       </div>
      
@@ -177,9 +154,6 @@
 	</center>
  	</div>
 	</div>
-
-
-
 <script src = "calendarscript.js"></script>
 
 </body>
