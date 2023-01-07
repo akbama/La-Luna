@@ -37,7 +37,10 @@ function printTotal() {
   var total = parseInt(a) + parseInt(b);
   res.append(total);
   con.appendChild(res);
-  var discount = document.querySelector('input[name="disc"]:checked').value;
+  var discount = 0;
+  if (a != 0) {
+    discount = document.querySelector('input[name="disc"]:checked').value;
+  }
   const con1 = document.getElementById("totalcontainer");
   var adiscounted = a  - (a/100)*discount;
   var totalwithdiscount = adiscounted + b;

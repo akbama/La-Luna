@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         or die($connect->error);
 
         if ($flag == 1) {
-            $connect->query("INSERT INTO `ss_add-on_services` (Owners_ID, `Professional Styling`, `Teeth Cleaning`, `Anal Sac Expression`, `Tick & Flea Meditation`, `Detangling Regular`, `Detangling Severe`, `Deshedding`, `Lux Whitening Shampoo`) 
+            $connect->query("INSERT INTO `ss_add-on_services` (`Owners_ID`, `Professional Styling`, `Teeth Cleaning`, `Anal Sac Expression`, `Tick & Flea Meditation`, `Detangling Regular`, `Detangling Severe`, `Deshedding`, `Lux Whitening Shampoo`) 
             VALUES('$owners_id',$arr[0], $arr[1], $arr[2], $arr[3], $arr[4], $arr[5], $arr[6], $arr[7])") 
             or die($connect->error);
         }

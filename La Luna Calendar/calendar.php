@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/Sidebar Nav/sidebar_style.css">
+  <link rel="stylesheet" href="../Sidebar Nav/sidebar_style.css">
   <link rel="stylesheet" href="calendarstyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,8 +27,8 @@
 <!--SIDEBAR-->
 <div class="sidebar">
   <div class="logo-details">
-  <img src="/Sidebar Nav/sidebar_logo_1.png" class="logopic1"></img>
-  <img src="/Sidebar Nav/sidebar_logo_2.png" class="logopic2"></img>
+  <img src="../Sidebar Nav/sidebar_logo_1.png" class="logopic1"></img>
+  <img src="../Sidebar Nav/sidebar_logo_2.png" class="logopic2"></img>
 </div>
 <ul class="nav-list">
   <li>
@@ -153,11 +153,18 @@
           <div id="6">Actions</div>
         </div>
         <hr>
+        <?php include ('calendardata.php'); ?>
         <div class="contents">
           <table class="tg">
+            <?php 
+            
+            while($row1 = $customertable->fetch_assoc()) { 
+              while($row2 = $result->fetch_assoc()){
+                //if ($row2['Owners_ID'] == $row['Owners_ID']) {
+              ?>
             <tbody>
               <tr>
-                <td class="tg-text1">Juan dela Cruz</td>
+                <td class="tg-text1"><?php echo $row2['Owners_ID']; ?></td>
                 <td class="tg-text2">Brownie</td>
                 <td class="tg-text3">09123456789</td>
                 <td class="tg-text4">Basic Bath</td>
@@ -169,56 +176,8 @@
              
                 </td>
               </tr>
-              <tr>
-                <td class="tg-text1">Cardo Dalisay</td>
-                <td class="tg-text2">Whitey</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">11:00 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Taylor Swift</td>
-                <td class="tg-text2">Blackie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">12:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Zhong Li</td>
-                <td class="tg-text2">Chubby</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">1:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Kathryn Bernardo</td>
-                <td class="tg-text2">Rex</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Nadine Lustre</td>
-                <td class="tg-text2">Lemon</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Maria Claire</td>
-                <td class="tg-text2">Tiger</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">2:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Michael Santos</td>
-                <td class="tg-text2">Pesto</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath, Deshedding</td>
-                <td class="tg-text5">3:00 PM</td>
-              </tr>
             </tbody>
+            <?php }} ?>
             </table>
         </div>
       </div>
