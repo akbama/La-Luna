@@ -119,8 +119,7 @@
                     <div>Sat</div>
                 </div>
                 
-                <button class="days"; id="days" >
-                </button>
+                <button class="days"></button>
             </div>
         </div>
     </div>
@@ -181,8 +180,7 @@
 
 
 
-<script src = "calendarscript.js">
-</script>
+<script src = "calendarscript.js"></script>
 
 </body>
 </html>

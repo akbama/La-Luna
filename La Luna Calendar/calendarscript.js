@@ -52,13 +52,10 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
-    if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
-    ) {
+    if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
       days += `<div class="today">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div id = ${i} onclick = clicked(${i},${date.getMonth()},${date.getFullYear()})> ${i}</div>`;
     }
   }
 
@@ -85,15 +82,14 @@ renderCalendar();
 // Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("days");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+function clicked(id,month, year) {
   modal.style.display = "block";
+  const d = new Date (year, month, id);
+  document.getElementById("date").innerHTML= d.toDateString();
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -115,7 +111,4 @@ $(document).ready(function(){
     $('li a').removeClass("active");
     $(this).addClass("active");
 });
-});     
-
-var dt = new Date();
-document.getElementById("date").innerHTML= dt.toDateString();
+});  
