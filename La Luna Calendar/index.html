@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/Sidebar Nav/sidebar_style.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -123,19 +124,112 @@
                     <div>Sat</div>
                 </div>
                 
-                <div class="days">
-                </div>
+                <button class="days"; id="days" >
+                </button>
             </div>
         </div>
     </div>
-</section>
 
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<center>
+    <div class="appointments">
+      <div class="table">
+        <div class="todaytitle">
+          <span id="date"></span>
+        </div>
+        <div class="tabletitle">
+          <div id="1">Owner</div>
+          <div id="2">Pet</div>
+          <div id="3">Contact</div>
+          <div id="4">Service</div>
+          <div id="5">Time</div>
+          <div id="6">Actions</div>
+        </div>
+        <hr>
+        <div class="contents">
+          <table class="tg">
+            <tbody>
+              <tr>
+                <td class="tg-text1">Juan dela Cruz</td>
+                <td class="tg-text2">Brownie</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Basic Bath</td>
+                <td class="tg-text5">10:00 AM</td>
+                <td class="buttons">
+                     <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="submit"><i class="fa-solid fa-pen"></i></button>
+                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
+             
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Cardo Dalisay</td>
+                <td class="tg-text2">Whitey</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Deluxe Bath</td>
+                <td class="tg-text5">11:00 AM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Taylor Swift</td>
+                <td class="tg-text2">Blackie</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Basic Bath</td>
+                <td class="tg-text5">12:00 PM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Zhong Li</td>
+                <td class="tg-text2">Chubby</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Deluxe Bath</td>
+                <td class="tg-text5">1:00 PM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Kathryn Bernardo</td>
+                <td class="tg-text2">Rex</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Basic Bath</td>
+                <td class="tg-text5">1:30 PM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Nadine Lustre</td>
+                <td class="tg-text2">Lemon</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Basic Bath</td>
+                <td class="tg-text5">1:30 PM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Maria Claire</td>
+                <td class="tg-text2">Tiger</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Deluxe Bath</td>
+                <td class="tg-text5">2:00 PM</td>
+              </tr>
+              <tr>
+                <td class="tg-text1">Michael Santos</td>
+                <td class="tg-text2">Pesto</td>
+                <td class="tg-text3">09123456789</td>
+                <td class="tg-text4">Deluxe Bath, Deshedding</td>
+                <td class="tg-text5">3:00 PM</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+      </div>
+     
+    </div>
+	</center>
+ 	</div>
+	</div>
 
 
 
 <script src = "script.js">
 </script>
 
-</script>
 </body>
 </html>
