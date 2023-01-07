@@ -236,8 +236,9 @@
         <button type = "button" onclick = "addToCart2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
-    <input type="hidden" id = "totalhotelcontainer">
-    <input type="hidden" id = "totalcontainer">
+    <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">
+    <input type="hidden" id = "totalhotelcontainer" name = "totalhotel">
+    <input type="hidden" id = "totalcontainer" name = "total">
     <div class = "buttons">
         <input type = "submit" value = "Add Booking" >
         <input type = "submit" class="btn-btn-open" value = "Proceed with Payment">

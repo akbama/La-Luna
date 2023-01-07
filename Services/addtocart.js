@@ -34,13 +34,19 @@ function printTotal() {
   if (a == null) a = 0;
   var b = document.getElementById("totalhotelcontainer").getAttribute('value');
   if (b == null) b = 0;
-  console.log (a + "and" + b);
   var total = parseInt(a) + parseInt(b);
   res.append(total);
   con.appendChild(res);
+  var discount = document.querySelector('input[name="disc"]:checked').value;
+  const con1 = document.getElementById("totalcontainer");
+  var adiscounted = a  - (a/100)*discount;
+  var totalwithdiscount = adiscounted + b;
+  con1.setAttribute('value', totalwithdiscount)
 
-  con1 = document.getElementById("totalcontainer");
-  con1.setAttribute('value', con1)
+  if (a!=0) {
+    var c = document.getElementById("totalspadiscountedcontainer");
+    c.setAttribute ('value', adiscounted);
+  }
 }
 function addToCart() {
     const tcontainer =  document.getElementById("totalspacontainer");
@@ -123,7 +129,6 @@ function addToCart() {
       }
     }
     var temptotal = parseInt(bathprice) + parseInt(totaladdons);
-    console.log(temptotal);
     const element = document.getElementById("inputsalescontainer");
     element.appendChild(result);
 
