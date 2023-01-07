@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2023 at 01:51 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jan 07, 2023 at 02:50 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,8 @@ CREATE TABLE `customer_details` (
   `Pets_Name` text NOT NULL,
   `Contact_Number` bigint(20) NOT NULL,
   `Date_Booked` datetime NOT NULL,
-  `App_Date` datetime NOT NULL
+  `App_Date` datetime NOT NULL,
+  `Total` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -48,7 +49,8 @@ CREATE TABLE `hotel_services` (
   `No_of_Nights` int(11) NOT NULL,
   `Extra_Guests1` int(11) NOT NULL,
   `Extra_Guests2` int(11) NOT NULL,
-  `Pet_Size` varchar(20) NOT NULL
+  `Pet_Size` varchar(20) NOT NULL,
+  `Hotel_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -81,7 +83,8 @@ CREATE TABLE `spa_services` (
   `Bath_Type` text NOT NULL,
   `Pet_Size` varchar(5) NOT NULL,
   `Discount` int(11) NOT NULL,
-  `Add-on_Services` tinyint(1) DEFAULT NULL
+  `Add-on_Services` tinyint(1) DEFAULT NULL,
+  `Spa_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
