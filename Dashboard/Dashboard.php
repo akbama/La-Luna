@@ -103,37 +103,42 @@
         <div class="todaytitle">
           <span class="text">Today's Appointments</span>
         </div>
-        <div class="tabletitle">
-          <div id="1">Owner</div>
-          <div id="2">Pet</div>
-          <div id="3">Contact</div>
-          <div id="4">Service</div>
-          <div id="5">Time</div>
-        </div>
-        <hr>
+        <table class="tg">
         <?php include ('dashboarddata.php'); ?>
-        <div class="contents">
-          <table class="tg">
-          <?php 
-            
+       <tr>
+          <th>Owner</th>
+          <th>Pet</th>
+          <th>Contact</th>
+          <th style = "text-align: center">Service</th>
+          <th style = "text-align:center; width: 20%">Add-ons</th>
+          <th>Time</th>
+        </tr>
+        
+            <?php 
+        
             while($row = $result->fetch_assoc()) { 
-                //if ($row2['Owners_ID'] == $row['Owners_ID']) {
               ?>
             <tbody>
               <tr>
+
+              <?php
+              $date = new DateTime($row['App_Date']);
+              $time = $date->format('H:i');
+              ?>
+
                 <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
                 <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
                 <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
                 <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
-                <td class="tg-text5"><?php echo date('H:i', strtotime($row['App_Date'])); ?></td>
+                <td class="tg-text5"><?php echo $row['Add-on_Services']; ?></td>
+                <td class="tg-text6"><?php echo $time; ?></td>
+
               </tr>
             </tbody>
-            <?php } ?>
-            </table>
-        </div>
-      </div>
-     
-    </div>
+            <?php }?>
+        </table>
+      </div> 
+    </div>   
 </section>
 <script>
 $(document).ready(function(){
