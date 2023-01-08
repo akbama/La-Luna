@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2023 at 11:59 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jan 07, 2023 at 10:57 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,13 +37,6 @@ CREATE TABLE `customer_details` (
   `Total` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `customer_details`
---
-
-INSERT INTO `customer_details` (`Owners_ID`, `Owners_Name`, `Pets_Name`, `Contact_Number`, `Date_Booked`, `App_Date`, `Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Yanna', 'Thea', 9952214003, '2023-01-08 06:49:53', '2023-01-10 08:50:00', '3502600');
-
 -- --------------------------------------------------------
 
 --
@@ -59,13 +52,6 @@ CREATE TABLE `hotel_services` (
   `Pet_Size` varchar(20) NOT NULL,
   `Hotel_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `hotel_services`
---
-
-INSERT INTO `hotel_services` (`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Pet_Size`, `Hotel_Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Suite', 3, 0, 0, 'X-XXL Dog', 2600);
 
 -- --------------------------------------------------------
 
@@ -83,7 +69,7 @@ CREATE TABLE `login_details` (
 --
 
 INSERT INTO `login_details` (`username`, `password`) VALUES
-('yanna', '123');
+('admin', 'pass123');
 
 -- --------------------------------------------------------
 
@@ -100,13 +86,6 @@ CREATE TABLE `spa_services` (
   `Add-on_Services` text DEFAULT NULL,
   `Spa_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `spa_services`
---
-
-INSERT INTO `spa_services` (`Owners_ID`, `Groomer`, `Bath_Type`, `Pet_Size`, `Discount`, `Add-on_Services`, `Spa_Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Name2', 'Basic Bath', 'M', 50, '[Professional Styling] [Teeth Cleaning] ', 350);
 
 --
 -- Indexes for dumped tables
