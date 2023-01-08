@@ -20,7 +20,7 @@ for (var i = 0; i < btns.length; i++) {
 
 
 btns[0].addEventListener("click", function() {
-    content.innerHTML = "<div class='inputfield'><label>Groomer</label><input type='text' class='input'></div>  <div class='inputfield'><label>Commission</label><input type='text' class='input'></div><div class='inputfield'><input name = 'updatedata' type='submit' value='Save' class='btn'></div>";
+    content.innerHTML = "<div class='inputfield'><label>Groomer</label><input type='text' class='input'></div>  <div class='inputfield'><label>Commission</label><input type='text' class='input'></div><div class='inputfield'><input name = 'updatedata' type='submit' value='Save' class='btn'></div> <table class='tg'><tr><th>Groomer</th><th>Commission</th><th>Action</th></tr> <?php $result = $connect->query('SELECT * FROM `groomer_details`') or die($connect->error); while($row = $result->fetch_assoc()) {?> <tbody><tr> <td class='tg-text1'><?php echo $row['Groomer_name']; ?></td><td class='tg-text2'><?php echo $row['Commission']; ?></td><td class='buttons'><button id = 'icon' type='submit'><i class='fa-solid fa-trash'></i></button></td></tr></tbody>";
 });
 
 btns[1].addEventListener("click", function() {

@@ -102,7 +102,37 @@
       <div class='inputfield'>
         <input type='submit' name = 'updatedata' value='Save' class='btn'>
       </div>
+      
+<?php include ('groomerdetails.php'); ?>
+<?php  
+    ?>
+       <table class="tg">
+       <tr>
+          <th>Groomer</th>
+          <th>Commission</th>
+          <th>Action</th>
+        </tr>
+        
+          <?php 
+        $result = $connect->query("SELECT * FROM `groomer_details`") 
+        or die($connect->error);
+        
+            while($row = $result->fetch_assoc()) { 
+              ?>
+            <tbody>
+            <tr> 
+                <td class="tg-text1"><?php echo $row['Groomer_name']; ?></td>
+                <td class="tg-text2"><?php echo $row['Commission']; ?></td>
+                <td class="buttons">
+                    <button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button>        
+                </td>
+              </tr>
+            </tbody>
+            <?php // endif; 
+          }?>
+
   </div>
+  
 </form>
 
 <script src = 'admin_2.js'></script>
