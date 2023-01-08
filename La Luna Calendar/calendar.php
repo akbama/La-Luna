@@ -135,7 +135,19 @@
         <div class="todaytitle">
           <span id="date"></span>
         </div>
+<<<<<<< Updated upstream
 
+=======
+        <div class="tabletitle">
+          <div id="1">Owner</div>
+          <div id="2">Pet</div>
+          <div id="3">Contact</div>
+          <div id="4">Service</div>
+          <div id="5">Add-ons</div>
+          <div id="6">Time</div>
+          <div id="7">Actions</div>
+        </div>
+>>>>>>> Stashed changes
         <hr>
         <?php include ('calendardata.php'); ?>
         <div class="contents" id = "con">

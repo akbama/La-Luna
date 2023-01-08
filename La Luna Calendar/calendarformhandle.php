@@ -40,7 +40,8 @@
                 <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
                 <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
                 <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
-                <td class="tg-text5"><?php echo $row['App_Date']; ?></td>
+                <td class="tg-text5"><?php echo $row['Add-on_Services']; ?></td>
+                <td class="tg-text6"><?php echo $row['App_Date']; ?></td>
                 <td class="buttons">
                     <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
                     <button type="submit"><i class="fa-solid fa-pen"></i></button>
