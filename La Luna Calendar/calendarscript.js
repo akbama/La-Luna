@@ -52,13 +52,10 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
-    if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
-    ) {
+    if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
       days += `<div class="today">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div id = ${i} onclick = clicked(${i},${date.getMonth()},${date.getFullYear()})> ${i}</div>`;
     }
   }
 
@@ -85,17 +82,21 @@ renderCalendar();
 // Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("days");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+function clicked(id,month, year) {
   modal.style.display = "block";
-}
+  const d = new Date (year, month, id);
+  var a = d.toDateString();
+  document.getElementById("date").innerHTML= a;
 
+  var b = year + "/" + (month+1) + "/" + id;
+  $("#con").load("calendarformhandle.php", {
+    clickeddate: b
+  });
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -108,14 +109,10 @@ window.onclick = function(event) {
   }
 }
 
-
 // function to get today's date
 $(document).ready(function(){
   $('ul li a').click(function(){
     $('li a').removeClass("active");
     $(this).addClass("active");
 });
-});     
-
-var dt = new Date();
-document.getElementById("date").innerHTML= dt.toDateString();
+}); 

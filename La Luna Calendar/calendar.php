@@ -118,9 +118,7 @@
                     <div>Fri</div>
                     <div>Sat</div>
                 </div>
-                
-                <button class="days"; id="days" >
-                </button>
+                <button class="days"></button>
             </div>
         </div>
     </div>
@@ -137,40 +135,23 @@
         <div class="todaytitle">
           <span id="date"></span>
         </div>
+<<<<<<< Updated upstream
+
+=======
         <div class="tabletitle">
           <div id="1">Owner</div>
           <div id="2">Pet</div>
           <div id="3">Contact</div>
           <div id="4">Service</div>
-          <div id="5">Time</div>
-          <div id="6">Actions</div>
+          <div id="5">Add-ons</div>
+          <div id="6">Time</div>
+          <div id="7">Actions</div>
         </div>
+>>>>>>> Stashed changes
         <hr>
         <?php include ('calendardata.php'); ?>
-        <div class="contents">
-          <table class="tg">
-            <?php 
-            
-            while($row = $result->fetch_assoc()) { 
-                //if ($row2['Owners_ID'] == $row['Owners_ID']) {
-              ?>
-            <tbody>
-              <tr>
-                <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
-                <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
-                <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
-                <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
-                <td class="tg-text5"><?php echo $row['App_Date']; ?></td>
-                <td class="buttons">
-                     <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="submit"><i class="fa-solid fa-pen"></i></button>
-                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
-             
-                </td>
-              </tr>
-            </tbody>
-            <?php } ?>
-            </table>
+        <div class="contents" id = "con">
+          
         </div>
       </div>
      
@@ -178,11 +159,7 @@
 	</center>
  	</div>
 	</div>
-
-
-
-<script src = "calendarscript.js">
-</script>
+<script src = "calendarscript.js"></script>
 
 </body>
 </html>

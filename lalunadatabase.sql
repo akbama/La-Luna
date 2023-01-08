@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2023 at 02:50 PM
+-- Generation Time: Jan 07, 2023 at 10:57 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -83,26 +83,8 @@ CREATE TABLE `spa_services` (
   `Bath_Type` text NOT NULL,
   `Pet_Size` varchar(5) NOT NULL,
   `Discount` int(11) NOT NULL,
-  `Add-on_Services` tinyint(1) DEFAULT NULL,
+  `Add-on_Services` text DEFAULT NULL,
   `Spa_Total` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ss_add-on_services`
---
-
-CREATE TABLE `ss_add-on_services` (
-  `Owners_ID` varchar(32) NOT NULL,
-  `Professional Styling` tinyint(1) DEFAULT NULL,
-  `Teeth Cleaning` tinyint(1) DEFAULT NULL,
-  `Anal Sac Expression` tinyint(1) DEFAULT NULL,
-  `Tick & Flea Meditation` tinyint(1) DEFAULT NULL,
-  `Detangling Regular` tinyint(1) DEFAULT NULL,
-  `Detangling Severe` tinyint(1) DEFAULT NULL,
-  `Deshedding` tinyint(1) DEFAULT NULL,
-  `Lux Whitening Shampoo` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -125,12 +107,6 @@ ALTER TABLE `hotel_services`
 -- Indexes for table `spa_services`
 --
 ALTER TABLE `spa_services`
-  ADD PRIMARY KEY (`Owners_ID`);
-
---
--- Indexes for table `ss_add-on_services`
---
-ALTER TABLE `ss_add-on_services`
   ADD PRIMARY KEY (`Owners_ID`);
 COMMIT;
 
