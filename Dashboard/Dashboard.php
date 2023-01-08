@@ -110,7 +110,7 @@
           <th>Pet</th>
           <th>Contact</th>
           <th style = "text-align: center">Service</th>
-          <th style = "text-align:center; width: 20%">Add-ons</th>
+          <th style = "text-align:center; width: 50px; white-space: nowrap; padding-left: 20px; padding-right: 40px;">Add-ons</th>
           <th>Time</th>
         </tr>
         
@@ -123,7 +123,7 @@
 
               <?php
               $date = new DateTime($row['App_Date']);
-              $time = $date->format('H:i');
+              $time = $date->format('H:i A');
               ?>
 
                 <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
