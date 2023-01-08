@@ -213,12 +213,12 @@ body
     border-top-right-radius: 50px;
 }
 
-.th {
+.tg th {
     padding-top: 2%;
     padding-bottom: 0.2%;
     font-size: 2vw;
     font-weight: 500;
-    text-align: initial;
+    text-align: center;
 }
 
 hr {
@@ -245,6 +245,7 @@ hr {
     border-collapse:collapse;
     width: 100%;
     padding-left: 5%;
+    border: 1px solid black;
 }
 
 .tg td
@@ -256,10 +257,15 @@ hr {
     padding-bottom: 1vw;
     word-break:normal;
     text-align: center;
-    vertical-align:top;
+    vertical-align:middle;
 }
 
-
+#icon {
+  border: none;
+}
+#icon i{
+  font-size: 2.1vw;
+}
 
 
 
