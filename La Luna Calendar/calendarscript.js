@@ -53,7 +53,7 @@ const renderCalendar = () => {
 
   for (let i = 1; i <= lastDay; i++) {
     if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-      days += `<div class="today">${i}</div>`;
+      days += `<div class="today" id = ${i} onclick = clicked(${i},${date.getMonth()},${date.getFullYear()})> ${i}</div>`;
     } else {
       days += `<div id = ${i} onclick = clicked(${i},${date.getMonth()},${date.getFullYear()})> ${i}</div>`;
     }

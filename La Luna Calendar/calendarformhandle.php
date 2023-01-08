@@ -34,7 +34,7 @@
               <tr> <?php
               $date = new DateTime($row['App_Date']);
               $newdate = $date->format('Y/m/d');
-              $time = $date->format('H:i');
+              $time = $date->format('H:i A');
               if ($dateinput == $newdate):
               ?>
                 <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>

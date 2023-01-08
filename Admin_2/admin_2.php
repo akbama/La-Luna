@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <html>
 <head>
 	<meta charset='UTF-8'>
@@ -92,25 +89,22 @@
   </script>
 
 <form action="logindetails_edit.php" method="POST">
-<div class='wrapper'>
-    <div class='form'>
-        <div class='inputfield'>
-          <label>Groomer</label>
-          <input type='text' class='input'>
-        </div>  
-    <div class='inputfield'>
-      <label>Commission</label>
-      <input type='text' class='input'>
-    </div>
-    <div class='inputfield'>
-      <input type='submit' value='Save' class='btn'>
-    </div>
-</div>
+  <div class='wrapper'>
+      <div class='form'>
+          <div class='inputfield'>
+            <label>Groomer</label>
+            <input type='text' class='input'>
+          </div>  
+      <div class='inputfield'>
+        <label>Commission</label>
+        <input type='text' class='input'>
+      </div>
+      <div class='inputfield'>
+        <input type='submit' name = 'updatedata' value='Save' class='btn'>
+      </div>
+  </div>
 </form>
 
 <script src = 'admin_2.js'></script>
 	
 </body>
-<?php
-    unset($_SESSION["error"]);
-?>
