@@ -10,7 +10,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/Sidebar Nav/sidebar_style.css">
   <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,76 +111,30 @@
           <div id="5">Time</div>
         </div>
         <hr>
+        <?php include ('dashboarddata.php'); ?>
         <div class="contents">
           <table class="tg">
+          <?php 
+            
+            while($row = $result->fetch_assoc()) { 
+                //if ($row2['Owners_ID'] == $row['Owners_ID']) {
+              ?>
             <tbody>
               <tr>
-                <td class="tg-text1">Juan dela Cruz</td>
-                <td class="tg-text2">Brownie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">10:00 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Cardo Dalisay</td>
-                <td class="tg-text2">Whitey</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">11:00 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Taylor Swift</td>
-                <td class="tg-text2">Blackie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">12:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Zhong Li</td>
-                <td class="tg-text2">Chubby</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">1:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Kathryn Bernardo</td>
-                <td class="tg-text2">Rex</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Nadine Lustre</td>
-                <td class="tg-text2">Lemon</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Maria Claire</td>
-                <td class="tg-text2">Tiger</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">2:00 PM</td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Michael Santos</td>
-                <td class="tg-text2">Pesto</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath, Deshedding</td>
-                <td class="tg-text5">3:00 PM</td>
+                <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
+                <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
+                <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
+                <td class="tg-text4"><?php echo $row['Bath_Type']; ?></td>
+                <td class="tg-text5"><?php echo date('H:i', strtotime($row['App_Date'])); ?></td>
               </tr>
             </tbody>
+            <?php } ?>
             </table>
         </div>
       </div>
      
     </div>
 </section>
-
-
-
-
 <script>
 $(document).ready(function(){
   $('ul li a').click(function(){
