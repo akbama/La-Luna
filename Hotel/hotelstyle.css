@@ -279,14 +279,14 @@ hr {
 }
 
 
-.tg td
+.tg td, .tg2 td
 {
   text-align: center;
   vertical-align:middle;
 }
 
 
-#tg-button2 {
+#tg2-button {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 3px;

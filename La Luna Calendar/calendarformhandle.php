@@ -45,7 +45,6 @@
                 <td class="tg-text6"><?php echo $time; ?></td>
                 <td class="buttons">
                     <button id = "icon" type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button id = "icon" type="submit"><i class="fa-solid fa-pen"></i></button>
                     <button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button>
                     
                 </td>

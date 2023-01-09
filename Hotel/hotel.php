@@ -126,8 +126,9 @@
             <th>Owner</th>
             <th>Pet</th>
             <th>Contact</th>
-            <th>Stay Type</th>
             <th>Room Type</th>
+            <th>Extra Guests (S-M)</th>
+            <th>Extra Guests (L-XXL)</th>
             <th>Check in</th>
             <th>Check out</th>
             <th>Actions</th>
@@ -139,10 +140,11 @@
                 <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
                 <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
                 <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
-                <td class="tg-text4"><?php echo $row['Stay_Type']; ?></td>
-                <td class="tg-text5"><?php echo $row['Room_Type']; ?></td>
-                <td class="tg-text6"><?php echo "temp"; ?></td>
-                <td class="tg-text7"><?php echo "temp" ?></td>
+                <td class="tg-text4"><?php echo $row['Room_Type']; ?></td>
+                <td class="tg-text5"><?php echo $row['Extra_Guests1']; ?></td>
+                <td class="tg-text6"><?php echo $row['Extra_Guests2']; ?></td>
+                <td class="tg-text7"><?php echo $row['Check_In_Date']; ?></td>
+                <td class="tg-text8"><?php echo $row['Check_Out_Date']; ?></td>
                     <td><button class="button" id="tg-button">Checkout</button>
                 </td>
               </tr>
@@ -167,21 +169,16 @@
             <th>Contact</th>
             <th>Stay Type</th>
             <th>Room Type</th>
-            <th>Check in</th>
-            <th>Check out</th>
             <th>Actions</th>
           </tr>
             <?php 
-              while($row = $result->fetch_assoc()) { 
+              while($row = $result1->fetch_assoc()) { 
               ?>
               <tr>
                 <td class="tg2-text1"><?php echo $row['Owners_Name']; ?></td>
                 <td class="tg2-text2"><?php echo $row['Pets_Name']; ?></td>
                 <td class="tg2-text3"><?php echo $row['Contact_Number']; ?></td>
-                <td class="tg2-text4"><?php echo $row['Stay_Type']; ?></td>
-                <td class="tg2-text5"><?php echo $row['Room_Type']; ?></td>
-                <td class="tg2-text6"><?php echo "temp"; ?></td>
-                <td class="tg2-text7"><?php echo "temp" ?></td>
+                <td class="tg2-text4"><?php echo $row['Pet_Size']; ?></td>
                     <td><button class="button" id="tg2-button">Checkout</button>
                 </td>
               </tr>
