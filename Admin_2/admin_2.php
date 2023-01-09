@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-	<title>Registration Form</title>
-	<link rel='stylesheet' href='admin_2.css'>
+	<title>Admin Controls</title>
+	<link rel='stylesheet' href='admin_2.css?v=<?php echo time(); ?>"'>
 </head>
 <body>
 
@@ -124,8 +124,7 @@
             <tr> 
                 <td class="tg-text1"><?php echo $row['Groomer_name']; ?></td>
                 <td class="tg-text2"><?php echo $row['Commission']; ?></td>
-                <td class="buttons">
-                <td><a href = "groomer_del.php?deleteid=<?php echo $row['Groomer_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a></tr>        
+                <td class="buttons"><a href = "groomer_del.php?deleteid=<?php echo $row['Groomer_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a>        
                 </td>
               </tr>
             </tbody>
