@@ -40,6 +40,28 @@ function extraguests (a,b) {
     }
   }
 
+  function setdaycarestyle() {
+    var daycare = document.getElementById("fordaycare");
+    var label = document.getElementById("label2")
+
+    daycare.disabled = true;
+    daycare.style.opacity = 0.2;
+    label.style.opacity = 0.4;
+  }
+
+  
+  function sethotelstyle() {
+    var hotel = document.getElementById("forroom");
+    var hotel2 = document.getElementById("guests");
+    var label2 = document.getElementById("label1")
+
+      label2.style.opacity = 0.4;
+      hotel.disabled = true;
+      hotel.style.opacity = 0.2;
+      hotel2.disabled = true;
+      hotel2.style.opacity = 0.2;
+  }
+
 $(document).ready(function(){
     $('ul li a').click(function(){
     $('li a').removeClass("active");

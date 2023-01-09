@@ -136,6 +136,7 @@ function addToCart() {
     element.appendChild(result);
 
     tcontainer.setAttribute('value', temptotal);
+    putData2();
     printTotal();
   }
 
@@ -230,5 +231,8 @@ function addToCart2() {
   element.appendChild(result);
 
   tcontainer.setAttribute('value', temptotal);
+  putData2();
   printTotal();
 }
+
+

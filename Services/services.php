@@ -100,7 +100,7 @@
             <table id = "forcustomer">
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
-                    <td id = "inp"> <input type = "text" id = "oname" class = "inputcustomer" name = "ownername" required oninput="myFunction()"> </td>
+                    <td id = "inp"> <input type = "text" id = "oname" class = "inputcustomer" name = "ownername" required oninput="myFunction();putData()"> </td>
                     <td style = "width: 25%;"> &emsp;&emsp;&emsp;Appointment Date </td>
                     <td id = "inp"> <input type = "datetime-local" id = "appdate" class = "inputcustomer2" name = "appdate" required oninput="myFunction3()"> </td>
                 </tr>
@@ -121,11 +121,13 @@
         <p id = "label">Spa Services</p>
             <table id = "forspa">
                 <tr>
+                  <?php include ('services_retrieve.php'); ?>
                     <td style = "width: 30%;"><h5>Select Groomer</h5> </td>
                     <td><select class = "custom-select" name = "select_groomer" id = "select_groomer">
                         <option value = "Null" selected></option>
-                        <option value = "Name1">Name 1</option>
-                        <option value = "Name2">Name 2</option>
+                        <?php  while($row = $result->fetch_assoc()) { ?>
+                        <option value = <?php echo $row['Groomer_name'] ?>><?php echo $row['Groomer_name'] ?></option>
+                        <?php }?>
                     </select></td>
                 </tr>
                 <tr>
@@ -182,22 +184,22 @@
         </div>
     </div>
     <div class = "hotelcontainer">
-        <p id = "label">Hotel</p>
+        <p id = "label1">Hotel</p>
         <div class="hotelbox">
-          <div class="roombox">
-            <table id = forroom>
+          <div class="roombox" id="rooms">
+            <table id = "forroom">
               <tr>
                 <td style = "width: 45%">  <h5> Room Type</h5> </td>
-              <td>
-                <input type = "radio" id = "deluxe" name = "type" value = "Deluxe" price = "500"> &ensp;Deluxe <br>
-                <input type = "radio" id = "catroom" name = "type" value = "Cat Room" price = "500"> &ensp;Cat Room <br>
-                <input type = "radio" id = "suite" name = "type" value = "Suite" price = "750"> &ensp;Suite <br>
+              <td>  
+                <input type = "radio" id = "deluxe" name = "type" value = "Deluxe" price = "500"  onclick="setdaycarestyle()"> &ensp;Deluxe <br>
+                <input type = "radio" id = "catroom" name = "type" value = "Cat Room" price = "500"  onclick="setdaycarestyle()"> &ensp;Cat Room <br>
+                <input type = "radio" id = "suite" name = "type" value = "Suite" price = "750" onclick="setdaycarestyle()"> &ensp;Suite <br>
               </td>
               </tr>
               <tr>
                 <td> <h5>No. of night/s  </h5> </td>
               <td>
-                <input type = "number" placeholder="1" class = "select1" min="1" name = "nightsnum" id = "nightsnum">
+                <input type = "number" placeholder="1" class = "select1" min="1" name = "nightsnum" id = "nightsnum" onclick="setdaycarestyle()">
               </td>
               </tr>
             </table>
@@ -207,26 +209,26 @@
               <tr>
                 <td style = "width: 45%"> <h5>Additional Guests </h5></td>
               <td>
-                <td><input type = "checkbox" id = "ag1" min = "1" name = "ag1" onclick = "extraguests('ag1','nightsnum1')" details = "s-m"> &ensp;Extra Guests (S-M)<br>
+                <td><input type = "checkbox" id = "ag1" min = "1" name = "ag1" onclick = "extraguests('ag1','nightsnum1');setdaycarestyle()" details = "s-m"> &ensp;Extra Guests (S-M)<br>
                   &ensp; &emsp;<input type = "number"  min = "1" class = "select2" name = "ag1" id = "nightsnum1" disabled style = "opacity: 0.5;" oninput = "setAttr('ag1','nightsnum1')"> <br>
-                    <input type = "checkbox" id = "ag2" min = "1"  name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2')" details = "l-xxl"> &ensp;Extra Guests (L-XXL) <br>
+                    <input type = "checkbox" id = "ag2" min = "1"  name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2');setdaycarestyle()" details = "l-xxl"x> &ensp;Extra Guests (L-XXL) <br>
                   &ensp; &emsp;<input type = "number" min = "1" class = "select2" name = "ag2" id = "nightsnum2" disabled style = "opacity: 0.5;" oninput = "setAttr('ag2','nightsnum2')">
               </td></td>
               </tr>
             </table>
           </div>
         </div> <br>
-        <p id = "label">Daycare Services</p>
+        <p id = "label2">Daycare Services</p>
         <table id = "fordaycare">
           <tr>
             <td style = "width: 45%">  <h5> Pet Size</h5> </td>
           <td>
-            <input type = "radio" name = "daycaretype" value = "S-M Dog/Cat" price = "250"> &ensp;S-M Dog/Cat<br>
-            <input type = "radio" name = "daycaretype" value = "X-XXL Dog" price = "350"> &ensp;X-XXL Dog
+            <input type = "radio" name = "daycaretype" value = "S-M Dog/Cat" price = "250" onclick="sethotelstyle()"> &ensp;S-M Dog/Cat<br>
+            <input type = "radio" name = "daycaretype" value = "X-XXL Dog" price = "350" onclick="sethotelstyle()"> &ensp;X-XXL Dog
           </td>
           </tr>
         </table>
-        <button type = "button" id = "submit-btn" onclick = "addToCart2()"> Submit </button>
+        <button type = "button" id = "submit-btn" onclick = "addToCart2();putData2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
     <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">
@@ -234,7 +236,7 @@
     <input type="hidden" id = "totalcontainer" name = "total">
     <div class = "buttons">
         <input type = "submit" value = "Add Booking" >
-        <input type = "submit" class="btn-btn-open" value = "Proceed with Payment">
+        <input id = "proceed" type = "button" class="btn-btn-open" value = "Proceed with Payment">
 </div>
 </form>
 <section class="modal hidden">
@@ -251,12 +253,12 @@
       <div class="modal-body">
       <div class="form-group">
         <label> Customer Name </label>
-            <input type="text" name="customer_name" id="customer_name" class="form-control" readonly>
+            <input type="text" name="customer_name" id="customer_name" class="form-control" readonly placeholder = "">
         </div>
     
         <div class="form-group">
             <label> Services </label>
-            <textarea name="services" id="services" class="form-control-services" ></textarea>
+            <textarea name="services" id="services" class="form-control-services" readonly></textarea>
         </div> 
     
     <div class="after-serv">

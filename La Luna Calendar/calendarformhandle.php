@@ -25,7 +25,7 @@
         </tr>
         
             <?php 
-        $result = $connect->query("SELECT * FROM `spa_services`,`customer_details` WHERE `spa_services`.`Owners_ID`= `customer_details`.`Owners_ID`;") 
+        $result = $connect->query("SELECT * FROM `spa_services`,`customer_details` WHERE `spa_services`.`Owners_ID`= `customer_details`.`Owners_ID` AND `Done?` != 'Yes';") 
         or die($connect->error);
         
             while($row = $result->fetch_assoc()) { 
@@ -44,10 +44,10 @@
                 <td class="tg-text5"><?php echo $row['Add-on_Services']; ?></td>
                 <td class="tg-text6"><?php echo $time; ?></td>
                 <td class="buttons">
-                    <button id = "icon" type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <a href = "calendar_pay.php?ownerid=<?php echo $row['Owners_ID'];?>"> <button id = "icon" type="submit" class="btn-btn-open"><i class="fa-solid fa-cart-shopping"></i></button></a>
                     <a href = "calendar_del.php?deleteid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a>
-                    
-                </td>
+                    <a href = "calendar_check.php?ownerid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-check"></i></button></a>
+                  </td>
               </tr>
             </tbody>
             <?php endif; }?>
