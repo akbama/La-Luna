@@ -719,3 +719,8 @@ a.active-page > i{
   color: #FADA5E;
 }
 
+
+::placeholder { 
+  color: gray;
+  opacity: 0.5;
+}
