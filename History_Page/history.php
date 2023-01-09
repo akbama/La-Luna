@@ -77,7 +77,6 @@
 <div class = "container">
     <p id = "title">History</h1>
     <div class = "filter">
-        <form action = "#">
             <p style = "font-weight: bold;"> Data from
             <input type = "date" id = "fromydate" name = "fromdate"> to 
             <input type = "date" id = "todate" name = "todate"> </p>
@@ -88,7 +87,7 @@
                 </div> <br>
                 <div>
                 <?php include ('history_retrieve.php'); ?>
-                    <select class = "custom-select">
+                    <select class = "custom-select" id = "select_groomer">
                     <option value = "Null" selected></option>
                     <?php  while($row = $result->fetch_assoc()) { ?>
                         <option value = <?php echo $row['Groomer_name'] ?>><?php echo $row['Groomer_name'] ?></option>
@@ -96,13 +95,13 @@
                       </select>
                 </div>
                 <br>
-            <input type="submit" value="Load">
-        </form>
+            <input type="button" value="Load" onclick = "load()">
     </div>
+    <?php include ('data_connect.php'); ?>
     <div class = "filterresults">
-        <div class = "Noresults">
+        <!--<div class = "Noresults">
             <img id = "noresults" src = "../Pictures/no_data.png">
-        </div>
+        </div>-->
     </div>
 </div>
 <script>
@@ -113,6 +112,7 @@ $(document).ready(function(){
 });
 });
 </script>
+<script src = "history.js"></script>
 </body>
 </html>
 <?php
