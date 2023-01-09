@@ -6,7 +6,7 @@ function load() {
     if (c == 'groomer') {
       d = document.getElementById("select_groomer").value;
     }
-    $(".filterresults").load("data_retrieve.php", {
+    $(".res").load("data_retrieve.php", {
         value1: a,
         value2: b,
         value3: c,
