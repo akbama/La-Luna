@@ -136,6 +136,10 @@ body
     opacity: 0.5;
 }
 
+#date {
+  overflow: scroll;
+}
+
 .today{
     background-color: #E1D5CA;
 }
@@ -231,6 +235,8 @@ hr {
 .contents {
     padding-top: 1%;
     padding-bottom: 2%;
+    overflow-x: scroll;
+    height: 70%;
 }
 
 .contents .customer {
