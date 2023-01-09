@@ -175,7 +175,7 @@
                 <td><input type = "checkbox" id = "op" name = "op8" value = "Lux Whitening Shampoo" price = "150"> &ensp;Lux Whitening Shampoo</td></td>
               </tr>                                                     
             </table></div>
-            <button type = "button" onclick = "addToCart()"> Submit </button>
+            <button type = "button" id = "submit-btn" onclick = "addToCart()"> Submit </button>
       </div>
         <div class = "spapic">
             <img id = "pic" src = "../Pictures/woman_with_dog.png">
@@ -226,7 +226,7 @@
           </td>
           </tr>
         </table>
-        <button type = "button" onclick = "addToCart2()"> Submit </button>
+        <button type = "button" id = "submit-btn" onclick = "addToCart2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
     <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">
