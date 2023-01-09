@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include ('hoteldata.php');
 ?>
 <html lang="en">
 
@@ -110,14 +111,14 @@
             </div>
         </div>
     </div>
-    <!--LIST OF PETS IN HOTEL-->
+    <!--  HOTEL -->
     <div class="appointments">
       <div class="table">
         <div class="todaytitle">
+            Hotel - 
             <span id="date"></span>
         </div>
         <hr>
-        <?php include ('hoteldata.php'); ?>
         <div class="contents">
           <table class="tg">
             <tbody>
@@ -150,6 +151,45 @@
             </table>
         </div>
       </div>
+    <!-- DAYCARE -->
+      <div class="table2">
+        <div class="todaytitle2">
+              Daycare - 
+            <span id="date2"></span>
+        </div>
+        <hr>
+        <div class="contents2">
+          <table class="tg2">
+            <tbody>
+            <tr>
+            <th>Owner</th>
+            <th>Pet</th>
+            <th>Contact</th>
+            <th>Stay Type</th>
+            <th>Room Type</th>
+            <th>Check in</th>
+            <th>Check out</th>
+            <th>Actions</th>
+          </tr>
+            <?php 
+              while($row = $result->fetch_assoc()) { 
+              ?>
+              <tr>
+                <td class="tg2-text1"><?php echo $row['Owners_Name']; ?></td>
+                <td class="tg2-text2"><?php echo $row['Pets_Name']; ?></td>
+                <td class="tg2-text3"><?php echo $row['Contact_Number']; ?></td>
+                <td class="tg2-text4"><?php echo $row['Stay_Type']; ?></td>
+                <td class="tg2-text5"><?php echo $row['Room_Type']; ?></td>
+                <td class="tg2-text6"><?php echo "temp"; ?></td>
+                <td class="tg2-text7"><?php echo "temp" ?></td>
+                    <td><button class="button" id="tg2-button">Checkout</button>
+                </td>
+              </tr>
+            </tbody>
+            <?php }?>
+            </table>
+        </div>
+      
      
     </div>
 </section>
@@ -167,6 +207,7 @@ $(document).ready(function(){
 
 var dt = new Date();
 document.getElementById("date").innerHTML= dt.toDateString();
+document.getElementById("date2").innerHTML= dt.toDateString();
 
 </script>
 

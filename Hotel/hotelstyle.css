@@ -189,6 +189,119 @@ hr {
     border-radius: 10px;
 }
 
+
+/* DAYCARE */
+
+.table2 {
+  width: 100%;
+  height:  40%;
+  border-radius: 50px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 0px 6px #CCCCCC;
+  margin-top: 5%;
+}
+
+.todaytitle2
+{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #FAFAFA;
+  background-color: #E1D5CA;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.tabletitle2 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 0.2%;
+  font-size: 1.8vw;
+  font-weight: 500;
+}
+
+hr {
+  margin-top: 0%;
+  margin-bottom: -0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.contents2 {
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.contents2 .customer2 {
+  
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.tg2  
+{
+  border-collapse:collapse;
+  margin-left: 2%;
+  width: 93%;
+}
+
+.tg2 td
+{
+  border-color: #FAFAFA;
+  border-style:solid;
+  border-width:1px;
+  font-size:1vw;
+  overflow:hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  word-break:normal;
+}
+
+#t1
+{
+  padding-left: 2%;
+}
+
+#t2
+{
+  padding-left: 1%;
+}
+
+#t6
+{
+  padding-right: 3%;    
+}
+
+
+.tg td
+{
+  text-align: center;
+  vertical-align:middle;
+}
+
+
+#tg-button2 {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100%;
+  background-color: #FDDA5E;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+
+
+
 /* SIDEBAR NAV */
 
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
