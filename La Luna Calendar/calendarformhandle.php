@@ -45,7 +45,7 @@
                 <td class="tg-text6"><?php echo $time; ?></td>
                 <td class="buttons">
                     <button id = "icon" type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button>
+                    <a href = "calendar_del.php?deleteid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a>
                     
                 </td>
               </tr>
