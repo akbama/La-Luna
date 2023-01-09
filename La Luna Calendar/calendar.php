@@ -92,7 +92,7 @@
             <span class="text">Appointments</span>
         </div>
         <div class="header-button">
-            <button type="button" id="add-button">Add booking</button>
+            <button type="button" id="add-button" onclick="window.location.href='../Services/services.php';">Add booking</button>
         </div>
     </div>
     <!--CALENDAR-->
@@ -136,7 +136,6 @@
         <div class="todaytitle">
           <span id="date"></span>
         </div>
-        <hr>
         <?php include ('calendardata.php'); ?>
         <div class="contents" id = "con">
         </div>
