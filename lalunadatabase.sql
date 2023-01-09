@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2023 at 07:45 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jan 09, 2023 at 07:52 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,9 @@ CREATE TABLE `customer_details` (
 --
 
 INSERT INTO `customer_details` (`Owners_ID`, `Owners_Name`, `Pets_Name`, `Contact_Number`, `Date_Booked`, `App_Date`, `Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Yanna', 'Thea', 9952214003, '2023-01-08 06:49:53', '2023-01-10 08:50:00', '3502600');
+('205ebcfa86b3803ebdc09a89bb8d7d4c', 'Yanna', 'Celly', 1231, '2023-01-09 14:46:22', '2023-01-09 14:46:00', '1500'),
+('7c786e587ab20a31b4238e0408c44b65', 'Elyze', '123', 2141, '2023-01-08 18:56:05', '2023-01-09 18:55:00', '250'),
+('d91a40af1e8c4b265c4631346d6af21b', 'Yanna', 'Celly', 2114, '2023-01-08 18:55:34', '2023-01-08 18:56:00', '1500');
 
 -- --------------------------------------------------------
 
@@ -63,7 +65,6 @@ INSERT INTO `groomer_details` (`Groomer_name`, `Commission`) VALUES
 ('Groomer 1', 10);
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `hotel_services`
 --
@@ -74,7 +75,6 @@ CREATE TABLE `hotel_services` (
   `No_of_Nights` int(11) NOT NULL,
   `Extra_Guests1` int(11) NOT NULL,
   `Extra_Guests2` int(11) NOT NULL,
-  `Pet_Size` varchar(20) NOT NULL,
   `Hotel_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -82,8 +82,28 @@ CREATE TABLE `hotel_services` (
 -- Dumping data for table `hotel_services`
 --
 
-INSERT INTO `hotel_services` (`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Pet_Size`, `Hotel_Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Suite', 3, 0, 0, 'X-XXL Dog', 2600);
+INSERT INTO `hotel_services` (`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Hotel_Total`) VALUES
+('205ebcfa86b3803ebdc09a89bb8d7d4c', 'Suite', 2, 0, 0, 1500),
+('d91a40af1e8c4b265c4631346d6af21b', 'Deluxe', 2, 1, 0, 1500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hotel_services_daycare`
+--
+
+CREATE TABLE `hotel_services_daycare` (
+  `Owners_ID` varchar(32) NOT NULL,
+  `Pet_Size` varchar(20) NOT NULL,
+  `Daycare_Total` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hotel_services_daycare`
+--
+
+INSERT INTO `hotel_services_daycare` (`Owners_ID`, `Pet_Size`, `Daycare_Total`) VALUES
+('7c786e587ab20a31b4238e0408c44b65', 'S-M Dog/Cat', 250);
 
 -- --------------------------------------------------------
 
@@ -118,13 +138,6 @@ CREATE TABLE `spa_services` (
   `Add-on_Services` text DEFAULT NULL,
   `Spa_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `spa_services`
---
-
-INSERT INTO `spa_services` (`Owners_ID`, `Groomer`, `Bath_Type`, `Pet_Size`, `Discount`, `Add-on_Services`, `Spa_Total`) VALUES
-('774de7b7b63e8c7dc203b62580c28e68', 'Name2', 'Basic Bath', 'M', 50, '[Professional Styling] [Teeth Cleaning] ', 350);
 
 --
 -- Indexes for dumped tables
