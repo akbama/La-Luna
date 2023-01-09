@@ -99,9 +99,12 @@
     </div>
     <?php include ('data_connect.php'); ?>
     <div class = "filterresults">
+      <div class = "res">
         <!--<div class = "Noresults">
             <img id = "noresults" src = "../Pictures/no_data.png">
         </div>-->
+      </div>
+      
     </div>
 </div>
 <script>
