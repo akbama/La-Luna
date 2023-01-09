@@ -87,10 +87,12 @@
                     <input type = "radio" id = "service" name = "filtertype" value = "service"> Service
                 </div> <br>
                 <div>
+                <?php include ('history_retrieve.php'); ?>
                     <select class = "custom-select">
-                        <option selected></option>
-                        <option value = "Name1">Name 1</option>
-                        <option value = "Name2">Name 2</option>
+                    <option value = "Null" selected></option>
+                    <?php  while($row = $result->fetch_assoc()) { ?>
+                        <option value = <?php echo $row['Groomer_name'] ?>><?php echo $row['Groomer_name'] ?></option>
+                        <?php }?>
                       </select>
                 </div>
                 <br>
