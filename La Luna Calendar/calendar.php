@@ -138,7 +138,6 @@
         <hr>
         <?php include ('calendardata.php'); ?>
         <div class="contents" id = "con">
-          
         </div>
       </div>
      

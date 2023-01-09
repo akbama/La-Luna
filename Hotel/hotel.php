@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include ('hoteldata.php');
 ?>
 <html lang="en">
 
@@ -110,108 +111,82 @@
             </div>
         </div>
     </div>
-    <!--LIST OF PETS IN HOTEL-->
+    <!--  HOTEL -->
     <div class="appointments">
       <div class="table">
         <div class="todaytitle">
+            Hotel - 
             <span id="date"></span>
-        </div>
-        <div class="tabletitle">
-          <div id="t1">Owner</div>
-          <div id="t2">Pet</div>
-          <div id="t3">Contact</div>
-          <div id="t4">Service</div>
-          <div id="t5">Time</div>
-          <div id="t6">Action</div>
         </div>
         <hr>
         <div class="contents">
           <table class="tg">
             <tbody>
+            <tr>
+            <th>Owner</th>
+            <th>Pet</th>
+            <th>Contact</th>
+            <th>Room Type</th>
+            <th>Extra Guests (S-M)</th>
+            <th>Extra Guests (L-XXL)</th>
+            <th>Check in</th>
+            <th>Check out</th>
+            <th>Actions</th>
+          </tr>
+            <?php 
+              while($row = $result->fetch_assoc()) { 
+              ?>
               <tr>
-                <td class="tg-text1">Juan dela Cruz</td>
-                <td class="tg-text2">Brownie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">10:00 AM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Cardo Dalisay</td>
-                <td class="tg-text2">Whitey</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">11:00 AM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Taylor Swift</td>
-                <td class="tg-text2">Blackie</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">12:00 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Zhong Li</td>
-                <td class="tg-text2">Chubby</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">1:00 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Kathryn Bernardo</td>
-                <td class="tg-text2">Rex</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Nadine Lustre</td>
-                <td class="tg-text2">Lemon</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Basic Bath</td>
-                <td class="tg-text5">1:30 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Maria Claire</td>
-                <td class="tg-text2">Tiger</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath</td>
-                <td class="tg-text5">2:00 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="tg-text1">Michael Santos</td>
-                <td class="tg-text2">Pesto</td>
-                <td class="tg-text3">09123456789</td>
-                <td class="tg-text4">Deluxe Bath, Deshedding</td>
-                <td class="tg-text5">3:00 PM</td>
-                <td class="tg-text6">
-                    <button class="button" id="tg-button">Checkout</button>
+                <td class="tg-text1"><?php echo $row['Owners_Name']; ?></td>
+                <td class="tg-text2"><?php echo $row['Pets_Name']; ?></td>
+                <td class="tg-text3"><?php echo $row['Contact_Number']; ?></td>
+                <td class="tg-text4"><?php echo $row['Room_Type']; ?></td>
+                <td class="tg-text5"><?php echo $row['Extra_Guests1']; ?></td>
+                <td class="tg-text6"><?php echo $row['Extra_Guests2']; ?></td>
+                <td class="tg-text7"><?php echo $row['Check_In_Date']; ?></td>
+                <td class="tg-text8"><?php echo $row['Check_Out_Date']; ?></td>
+                    <td><button class="button" id="tg-button">Checkout</button>
                 </td>
               </tr>
             </tbody>
+            <?php }?>
             </table>
         </div>
       </div>
+    <!-- DAYCARE -->
+      <div class="table2">
+        <div class="todaytitle2">
+              Daycare - 
+            <span id="date2"></span>
+        </div>
+        <hr>
+        <div class="contents2">
+          <table class="tg2">
+            <tbody>
+            <tr>
+            <th>Owner</th>
+            <th>Pet</th>
+            <th>Contact</th>
+            <th>Stay Type</th>
+            <th>Room Type</th>
+            <th>Actions</th>
+          </tr>
+            <?php 
+              while($row = $result1->fetch_assoc()) { 
+              ?>
+              <tr>
+                <td class="tg2-text1"><?php echo $row['Owners_Name']; ?></td>
+                <td class="tg2-text2"><?php echo $row['Pets_Name']; ?></td>
+                <td class="tg2-text3"><?php echo $row['Contact_Number']; ?></td>
+                <td class="tg2-text4"><?php echo $row['Pet_Size']; ?></td>
+                    <td><button class="button" id="tg2-button">Checkout</button>
+                </td>
+              </tr>
+            </tbody>
+            <?php }?>
+            </table>
+        </div>
+      
      
     </div>
 </section>
@@ -229,6 +204,7 @@ $(document).ready(function(){
 
 var dt = new Date();
 document.getElementById("date").innerHTML= dt.toDateString();
+document.getElementById("date2").innerHTML= dt.toDateString();
 
 </script>
 

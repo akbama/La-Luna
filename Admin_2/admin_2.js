@@ -20,9 +20,11 @@ for (var i = 0; i < btns.length; i++) {
 
 
 btns[0].addEventListener("click", function() {
-    content.innerHTML = "<div class='inputfield'><label>Groomer</label><input type='text' class='input'></div>  <div class='inputfield'><label>Commission</label><input type='text' class='input'></div><div class='inputfield'><input name = 'updatedata' type='submit' value='Save' class='btn'></div>";
+    document.getElementById("groomerdetails").style.display = "block";
+    content.innerHTML = "<div class='inputfield'><label>Groomer</label><input type='text' class='input' name = 'groomer'></div>  <div class='inputfield'><label>Commission</label><input type='text' class='input' name = 'commission'></div><div class='inputfield'><input name = 'updatedatagroomer' type='submit' value='Save' class='btn'></div>";
 });
 
 btns[1].addEventListener("click", function() {
-    content.innerHTML = "<div class='form'><div class='inputfield'><label>Username</label><input name='username' type='text' class='input'></div>  <div class='inputfield'><label>Password</label><input name='password' type='text' class='input'></div><div class='inputfield'><input name = 'updatedata' type='submit' value='Save' class='btn'></div></div>";
+    document.getElementById("groomerdetails").style.display = "none";
+    content.innerHTML = "<div class='form'><div class='inputfield'><label>Username</label><input name='username' type='text' class='input'></div>  <div class='inputfield'><label>Password</label><input name='password' type='text' class='input'></div><div class='inputfield'><input name = 'updatedatalogin' type='submit' value='Save' class='btn'></div></div>";
 });

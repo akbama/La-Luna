@@ -110,9 +110,9 @@
                 </tr>
                 <tr>
                     <td> Contact Number</td>
-                    <td id = "inp"> <input type = "number" id = "cnumber" class = "inputcustomer" name = "cnumber" required oninput="myFunction2()" data-value = "10"> </td>
+                    <td id = "inp"> <input type = "tel" pattern="[0-9]{11}" placeholder="09123456789" id = "cnumber" class = "inputcustomer" name = "cnumber" required oninput="myFunction2()" data-value = "10"> </td>
                 </tr> 
-            </table>
+            </table> 
              
         </p>
     </div>
@@ -151,7 +151,7 @@
                         <input type = "radio" id = "ten" name = "disc" value = "10"> 10% &emsp; &emsp;
                         <input type = "radio" id = "fifty" name = "disc" value = "50"> 50% &emsp; &emsp;
                         <input type = "radio" id = "manual" name = "disc" onclick = "selectmanual()"> Manual &emsp;
-                        <input type = "number" class = "select1" id = "manualinput" name = "disc" style = "opacity: 0.5;" disabled>
+                        <input type = "number" class = "select1" min="1" id = "manualinput" name = "disc" style = "opacity: 0.5;" disabled>
                     </td>
                 </tr>
             </table> <br>
@@ -175,7 +175,7 @@
                 <td><input type = "checkbox" id = "op" name = "op8" value = "Lux Whitening Shampoo" price = "150"> &ensp;Lux Whitening Shampoo</td></td>
               </tr>                                                     
             </table></div>
-            <button type = "button" onclick = "addToCart()"> Submit </button>
+            <button type = "button" id = "submit-btn" onclick = "addToCart()"> Submit </button>
       </div>
         <div class = "spapic">
             <img id = "pic" src = "../Pictures/woman_with_dog.png">
@@ -197,7 +197,7 @@
               <tr>
                 <td> <h5>No. of night/s  </h5> </td>
               <td>
-                <input type = "number" class = "select1" name = "nightsnum" id = "nightsnum">
+                <input type = "number" placeholder="1" class = "select1" min="1" name = "nightsnum" id = "nightsnum">
               </td>
               </tr>
             </table>
@@ -207,10 +207,10 @@
               <tr>
                 <td style = "width: 45%"> <h5>Additional Guests </h5></td>
               <td>
-                <td><input type = "checkbox" id = "ag1" name = "ag1" onclick = "extraguests('ag1','nightsnum1')" details = "s-m"> &ensp;Extra Guests (S-M)<br>
-                  &ensp; &emsp;<input type = "number" class = "select2" name = "ag1" id = "nightsnum1" disabled style = "opacity: 0.5;" oninput = "setAttr('ag1','nightsnum1')"> <br>
-                    <input type = "checkbox" id = "ag2" name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2')" details = "l-xxl"> &ensp;Extra Guests (L-XXL) <br>
-                  &ensp; &emsp;<input type = "number" class = "select2" name = "ag2" id = "nightsnum2" disabled style = "opacity: 0.5;" oninput = "setAttr('ag2','nightsnum2')">
+                <td><input type = "checkbox" id = "ag1" min = "1" name = "ag1" onclick = "extraguests('ag1','nightsnum1')" details = "s-m"> &ensp;Extra Guests (S-M)<br>
+                  &ensp; &emsp;<input type = "number"  min = "1" class = "select2" name = "ag1" id = "nightsnum1" disabled style = "opacity: 0.5;" oninput = "setAttr('ag1','nightsnum1')"> <br>
+                    <input type = "checkbox" id = "ag2" min = "1"  name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2')" details = "l-xxl"> &ensp;Extra Guests (L-XXL) <br>
+                  &ensp; &emsp;<input type = "number" min = "1" class = "select2" name = "ag2" id = "nightsnum2" disabled style = "opacity: 0.5;" oninput = "setAttr('ag2','nightsnum2')">
               </td></td>
               </tr>
             </table>
@@ -226,7 +226,7 @@
           </td>
           </tr>
         </table>
-        <button type = "button" onclick = "addToCart2()"> Submit </button>
+        <button type = "button" id = "submit-btn" onclick = "addToCart2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
     <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">

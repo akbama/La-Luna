@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login_pass = $_POST['password'];
 
     if (($login_username == $username) && ($login_pass == $pass)){
-        header("Location: ../Dashboard/Dashboard.html");
+        header("Location: ../Dashboard/Dashboard.php");
         }
         else {
             $_SESSION["error"] = $error;
