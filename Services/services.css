@@ -45,7 +45,7 @@ input[type="submit"], #proceed {
     margin-right: 60px;
 }
 
-#label {
+#label, #label1, #label2 {
     font-size: 1.8vw;
     font-weight: 600;
     color: #3A3A3A;
