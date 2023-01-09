@@ -171,47 +171,12 @@ hr {
 
 
 
-.tg .tg-text1
+.tg td
 {
     text-align: center;
-    vertical-align:top;
-    width: 18%;
+    vertical-align:middle;
 }
 
-.tg .tg-text2
-{
-    text-align: center;
-    vertical-align:top;
-    width: 15%;
-}
-
-.tg .tg-text3
-{
-    text-align: center;
-    vertical-align:top;
-    width: 18%;
-}
-
-.tg .tg-text4
-{
-    text-align: center;
-    vertical-align:top;
-    width: 20%;
-}
-
-.tg .tg-text5
-{
-    text-align: center;
-    vertical-align:top;
-    width: 15%;
-}
-
-.tg .tg-text6 {
-    text-align: center;
-    vertical-align:top;
-    width: 15%;
-    justify-content: center;
-}
 
 #tg-button {
     padding-left: 10px;

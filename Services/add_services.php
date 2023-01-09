@@ -59,18 +59,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (is_null($r_type) == false) {
         $n_nights = $_POST['nightsnum'];
         $arr2 = array($_POST['ag1'], $_POST['ag2']);
-        $dcservices = $_POST['daycaretype'];
         $hoteltotal = $_POST['totalhotel'];
-        
         for ($i = 0; $i < 2; $i++) {
             if (is_null($arr2[$i])==true)
                 $arr2[$i] = 0;
         }
-        
-        $connect->query("INSERT INTO `hotel_services`(`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Pet_Size`,`Hotel_Total`)
-        VALUES('$owners_id','$r_type',$n_nights,$arr2[0],$arr2[1],'$dcservices',$hoteltotal)") 
+        $connect->query("INSERT INTO `hotel_services`(`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Hotel_Total`)
+        VALUES('$owners_id','$r_type',$n_nights,$arr2[0],$arr2[1], $hoteltotal)") 
         or die($connect->error);
     }
+    
+    $dcservices = $_POST['daycaretype'];
+    if (is_null($dcservices) == false) {
+        $hoteltotal = $_POST['totalhotel'];
+        $connect->query("INSERT INTO `hotel_services_daycare`(`Owners_ID`, `Pet_Size`, `Daycare_Total`)
+        VALUES('$owners_id','$dcservices', $hoteltotal)") 
+        or die($connect->error);
+    }
+
     header("Location: services.php");   
 }
 
