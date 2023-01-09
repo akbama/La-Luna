@@ -139,6 +139,25 @@
         </table>
       </div> 
     </div>   
+
+        <!--BANNER FOR NUM OF PETS IN HOTEL-->
+        <div class="banner1">
+        <div class="box1">
+            <div class="pets-num">
+                <div class="number">4</div>
+                <div class="box-text">pets checked in</div>
+            </div>
+            <div class="pets-num">
+                <div class="number">2</div>
+                <div class="box-text">to arrive</div>
+            </div>
+            <div class="pets-num">
+                <div class="number">7</div>
+                <div class="box-text">rooms available</div>
+            </div>
+        </div>
+    </div>
+
 </section>
 <script>
 $(document).ready(function(){

@@ -3,7 +3,7 @@ body {
     background-color: #FAFAFA;
     position: relative;
     height: auto;
-    min-height: 100% !important;
+    min-height: 100%;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
     width: 60%;
     height: 35vh;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 35px;
     background-color: #FDDA5E;
     box-shadow: 0px 0px 6px #CCCCCC;
     margin-top: 50px;
@@ -76,7 +76,7 @@ body {
     display: block;
     overflow: auto;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 35px;
     background-color: #FAFAFA;
     box-shadow: 0px 0px 6px #CCCCCC;
     margin-top: 50px;
@@ -94,8 +94,8 @@ body {
     font-weight: bold;
     color: #FAFAFA;
     background-color: #E1D5CA;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
 }
 
 .tabletitle {
@@ -352,4 +352,49 @@ a.active-page > i{
 
 .sidebar:hover a.active-page > i{
   color: #FADA5E;
+}
+
+/* HOTEL */
+
+.banner1 {
+  position: relative;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  margin-top: -20px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.box1 {
+  width: 80%;
+  height:  50%;
+  border-radius: 35px;
+  background-color: white;
+  margin-top: -80px;
+  margin-bottom: 80px;
+  margin-left: 25%;
+  box-shadow: 0px 0px 6px #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pets-num
+{
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.number {
+  font-size: 4.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box-text {
+  text-align: center;
+  font-size: 1.1vw;
 }
