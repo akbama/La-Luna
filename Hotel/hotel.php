@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/Sidebar Nav/sidebar_style.css">
-  <link rel="stylesheet" href="hotelstyle.css">
+  <link rel="stylesheet" href="hotelstyle.css?v=<?php echo time(); ?>'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,7 +124,7 @@
             <tbody>
             <tr>
             <th>Owner</th>
-            <th>Pet</th>
+            <th style="text-align:center; width: 50px; padding-left: 10px; padding-right: 0px;">Pet</th>
             <th>Contact</th>
             <th>Room Type</th>
             <th>Extra Guests (S-M)</th>
