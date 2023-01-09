@@ -4,7 +4,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +11,7 @@
 	<title>Registration Form</title>
 	<link rel='stylesheet' href='admin_2.css'>
 </head>
-<body onload ="def();">
+<body>
 
 <div class='title'>
     Admin Controls
@@ -92,20 +91,22 @@
   <div class='wrapper'>
       <div class='form'>
           <div class='inputfield'>
-            <label>Groomer</label>
-            <input type='text' class='input'>
+            <label id = "text1">Groomer</label>
+            <input type='text' class='input' name = 'groomer'>
           </div>  
       <div class='inputfield'>
         <label>Commission</label>
-        <input type='text' class='input'>
+        <input type='text' class='input' name = 'commission'>
       </div>
       <div class='inputfield'>
-        <input type='submit' name = 'updatedata' value='Save' class='btn'>
+        <input type='submit' name = 'updatedatagroomer' value='Save' class='btn'>
       </div>
-      
+      </form> 
+      </div>
+</div>
+
+<div class = 'wrapper' id = "groomerdetails">
 <?php include ('groomerdetails.php'); ?>
-<?php  
-    ?>
        <table class="tg">
        <tr>
           <th>Groomer</th>
@@ -124,17 +125,13 @@
                 <td class="tg-text1"><?php echo $row['Groomer_name']; ?></td>
                 <td class="tg-text2"><?php echo $row['Commission']; ?></td>
                 <td class="buttons">
-                    <button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button>        
+                <td><a href = "groomer_del.php?deleteid=<?php echo $row['Groomer_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a></tr>        
                 </td>
               </tr>
             </tbody>
-            <?php // endif; 
+            <?php
           }?>
-
-  </div>
-  
-</form>
-
+</div>
 <script src = 'admin_2.js'></script>
 	
 </body>
