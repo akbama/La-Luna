@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2023 at 12:23 PM
+-- Generation Time: Jan 09, 2023 at 07:45 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -43,6 +43,24 @@ CREATE TABLE `customer_details` (
 
 INSERT INTO `customer_details` (`Owners_ID`, `Owners_Name`, `Pets_Name`, `Contact_Number`, `Date_Booked`, `App_Date`, `Total`) VALUES
 ('774de7b7b63e8c7dc203b62580c28e68', 'Yanna', 'Thea', 9952214003, '2023-01-08 06:49:53', '2023-01-10 08:50:00', '3502600');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `groomer_details`
+--
+
+CREATE TABLE `groomer_details` (
+  `Groomer_name` varchar(30) NOT NULL,
+  `Commission` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `groomer_details`
+--
+
+INSERT INTO `groomer_details` (`Groomer_name`, `Commission`) VALUES
+('Groomer 1', 10);
 
 -- --------------------------------------------------------
 
