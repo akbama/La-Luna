@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-input[type="submit"] {
+input[type="submit"], #proceed {
     width: 25%;
     border-radius: 25px;
     border: none;

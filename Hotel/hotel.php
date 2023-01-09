@@ -134,6 +134,7 @@
             <th>Actions</th>
           </tr>
             <?php 
+              $today = date("Y-m-d"); // today
               while($row = $result->fetch_assoc()) { 
               ?>
               <tr>
@@ -144,9 +145,13 @@
                 <td class="tg-text5"><?php echo $row['Extra_Guests1']; ?></td>
                 <td class="tg-text6"><?php echo $row['Extra_Guests2']; ?></td>
                 <td class="tg-text7"><?php echo $row['Check_In_Date']; ?></td>
-                <td class="tg-text8"><?php echo $row['Check_Out_Date']; ?></td>
-                    <td><button class="button" id="tg-button">Checkout</button>
-                </td>
+                <?php if(strtotime($today) > strtotime($row['Check_Out_Date'])){
+                  echo '<td class="tg-text7" style="color: #bb0a1e">' .$row['Check_Out_Date']. '</td>';
+                  echo '<td><button style="background-color: #bb0a1e; color: white" class="button"  id="tg-button">Checkout</button>';
+                }else{
+                  echo '<td class="tg-text7" style="color: black">' . $row['Check_Out_Date'] . '</td>';
+                  echo '<td><button style="background-color: #FADA5E" class="button"  id="tg-button">Checkout</button>';
+                }?>
               </tr>
             </tbody>
             <?php }?>

@@ -16,6 +16,10 @@ $c = uniqid (rand (),true);
 $md5c = md5($c);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $paid = "No";
+    if ($_POST['print-receipt']) {
+        $paid = "Yes";
+    }
     //get the customer details
     $owners_id = $md5c;
     $owners_name = $_POST['ownername'];
@@ -24,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $app_date = $_POST['appdate'];
     $c_number = $_POST['cnumber'];
     $total = $_POST['total'];
-    $connect->query("INSERT INTO customer_details (Owners_ID, Owners_Name, Pets_Name, Contact_Number, Date_Booked, App_Date, Total) 
-    VALUES('$owners_id','$owners_name','$pets_name',$c_number,'$date_booked','$app_date', $total)") 
+    $connect->query("INSERT INTO customer_details (Owners_ID, Owners_Name, Pets_Name, Contact_Number, Date_Booked, App_Date, Total, Paid) 
+    VALUES('$owners_id','$owners_name','$pets_name',$c_number,'$date_booked','$app_date', $total, '$paid')") 
     or die($connect->error);
 
     $groomer = $_POST['select_groomer'];
