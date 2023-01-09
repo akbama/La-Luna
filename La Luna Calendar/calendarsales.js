@@ -1,7 +1,8 @@
-const modal = document.querySelector(".modal");
+const modal1 = document.querySelector(".modal2");
 const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
+
 var cash = document.querySelector("#cash");
 var gcash = document.querySelector("#gcash");
 var paymaya = document.querySelector("#paymaya");
@@ -13,7 +14,7 @@ refNum.style.display = 'none';
 body.style.overflow = "auto";
 // close modal function
 const closeModal = function () {
-  modal.classList.add("hidden");
+  modal1.classList.add("hidden");
   overlay.classList.add("hidden");
   body.style.overflow = "auto";
 };
@@ -25,14 +26,14 @@ overlay.addEventListener("click", closeModal);
 
 // close modal when the Esc key is pressed
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+  if (e.key === "Escape" && !modal1.classList.contains("hidden")) {
     closeModal();
   }
 });
 
 // open modal function
 const openModal = function () {
-  modal.classList.remove("hidden");
+  modal1.classList.remove("hidden");
   overlay.classList.remove("hidden");
   body.style.overflow = "hidden";
 };
@@ -58,14 +59,8 @@ function showRefNum(){
 gcash.addEventListener("click", showRefNum);
 paymaya.addEventListener("click", showRefNum);
 bank.addEventListener("click", showRefNum);
-cash.addEventListener("click", hideRefNum);    
+cash.addEventListener("click", hideRefNum);
 
-function putData () {
-  var oname = document.getElementById("oname").value;
-  document.getElementById("customer_name").placeholder = oname;
-}
-
-function putData2() {
-  var initContent1 = document.getElementById("#sparesult");
-  var container = document.getElementById("#services");
+function data () {
+    console.log("echo");
 }

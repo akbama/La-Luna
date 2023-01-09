@@ -100,7 +100,7 @@
             <table id = "forcustomer">
                 <tr>
                     <td style = "width: 20%;"> Owner's Name </td>
-                    <td id = "inp"> <input type = "text" id = "oname" class = "inputcustomer" name = "ownername" required oninput="myFunction()"> </td>
+                    <td id = "inp"> <input type = "text" id = "oname" class = "inputcustomer" name = "ownername" required oninput="myFunction();putData()"> </td>
                     <td style = "width: 25%;"> &emsp;&emsp;&emsp;Appointment Date </td>
                     <td id = "inp"> <input type = "datetime-local" id = "appdate" class = "inputcustomer2" name = "appdate" required oninput="myFunction3()"> </td>
                 </tr>
@@ -121,11 +121,13 @@
         <p id = "label">Spa Services</p>
             <table id = "forspa">
                 <tr>
+                  <?php include ('services_retrieve.php'); ?>
                     <td style = "width: 30%;"><h5>Select Groomer</h5> </td>
                     <td><select class = "custom-select" name = "select_groomer" id = "select_groomer">
                         <option value = "Null" selected></option>
-                        <option value = "Name1">Name 1</option>
-                        <option value = "Name2">Name 2</option>
+                        <?php  while($row = $result->fetch_assoc()) { ?>
+                        <option value = <?php echo $row['Groomer_name'] ?>><?php echo $row['Groomer_name'] ?></option>
+                        <?php }?>
                     </select></td>
                 </tr>
                 <tr>
@@ -226,7 +228,7 @@
           </td>
           </tr>
         </table>
-        <button type = "button" id = "submit-btn" onclick = "addToCart2()"> Submit </button>
+        <button type = "button" id = "submit-btn" onclick = "addToCart2();putData2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
     <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">
@@ -234,7 +236,7 @@
     <input type="hidden" id = "totalcontainer" name = "total">
     <div class = "buttons">
         <input type = "submit" value = "Add Booking" >
-        <input type = "submit" class="btn-btn-open" value = "Proceed with Payment">
+        <input id = "proceed" type = "button" class="btn-btn-open" value = "Proceed with Payment">
 </div>
 </form>
 <section class="modal hidden">
@@ -251,12 +253,12 @@
       <div class="modal-body">
       <div class="form-group">
         <label> Customer Name </label>
-            <input type="text" name="customer_name" id="customer_name" class="form-control" readonly>
+            <input type="text" name="customer_name" id="customer_name" class="form-control" readonly placeholder = "">
         </div>
     
         <div class="form-group">
             <label> Services </label>
-            <textarea name="services" id="services" class="form-control-services" ></textarea>
+            <textarea name="services" id="services" class="form-control-services" readonly></textarea>
         </div> 
     
     <div class="after-serv">
