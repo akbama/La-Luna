@@ -39,7 +39,7 @@ if ($type == 'groomer') {
         <td> <?php echo $commission; ?> </td>
         </tr>
 <?php 
-}}?> </table><br><br><p> Total: 
+}}?> </table><br><br><p id="total"> Total: 
 <?php echo $total ?> </p>
 <?php }
 else {
