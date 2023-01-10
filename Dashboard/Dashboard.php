@@ -139,22 +139,30 @@
         </table>
       </div> 
     </div>   
+    <?php include ('hoteldata.php');
+    $colsum = $colres->fetch_assoc();
+    $rownum = $rowres->fetch_assoc();
+    $dycrsum = $dycr->fetch_assoc();
+    $total = $colsum['total'] + $rownum['total1'];
+    $dycr1 = $dycrsum['dycr_count'];
 
+
+?>
         <!--BANNER FOR NUM OF PETS IN HOTEL-->
         <div class="banner1">
         <div class="box1">
-            <div class="pets-num">
-                <div class="number">4</div>
-                <div class="box-text">pets checked in</div>
+            <div class="pets-htl">
+                <div class="number"><?php echo $total; ?></div>
+                <div class="box-text">pets in hotel</div>
             </div>
-            <div class="pets-num">
-                <div class="number">2</div>
-                <div class="box-text">to arrive</div>
+            <div class="image1">
+              <img id="cat-image" src="../Pictures/3d-casual-life-cat-lies-on-open-books.png" alt="cat-image">
             </div>
-            <div class="pets-num">
-                <div class="number">7</div>
-                <div class="box-text">rooms available</div>
+            <div class="pets-dycr">
+                <div class="number"><?php echo $dycr1; ?></div>
+                <div class="box-text">pets in daycare</div>
             </div>
+
         </div>
     </div>
 

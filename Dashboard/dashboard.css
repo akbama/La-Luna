@@ -36,6 +36,11 @@ body {
     justify-content: space-around;
 }
 
+.image1{
+  padding: 0%;
+  margin: -30%;
+}
+
 #dog-image {
     position: relative;
     bottom: 0%;
@@ -224,6 +229,14 @@ body {
   -webkit-box-shadow: 3px 0px 11px -3px rgba(206, 68, 68, 0.22);
   -moz-box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
   box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
+}
+
+#cat-image{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sidebar:hover{
