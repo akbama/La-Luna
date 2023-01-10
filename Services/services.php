@@ -228,7 +228,7 @@
           </td>
           </tr>
         </table>
-        <button type = "button" id = "submit-btn" onclick = "addToCart2();putData2()"> Submit </button>
+        <button type = "button" id = "submit-btn" onclick = "addToCart2()"> Submit </button>
     </div>
     <input type="hidden" id = "totalspacontainer">
     <input type="hidden" id = "totalspadiscountedcontainer" name = "totalspa">
@@ -256,16 +256,7 @@
             <input type="text" name="customer_name" id="customer_name" class="form-control" readonly placeholder = "">
         </div>
     
-        <div class="form-group">
-            <label> Services </label>
-            <textarea name="services" id="services" class="form-control-services" readonly></textarea>
-        </div> 
-    
     <div class="after-serv">
-        <div class="form-group">
-            <label> Discount </label>
-            <input type="text" name="discount" id="discount" class="form-control" readonly> 
-        </div>
     
         <div class="form-group">
             <label> Total Amount</label>

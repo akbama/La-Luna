@@ -46,7 +46,9 @@ date_default_timezone_set('Asia/Manila');
                 <td class="tg-text5"><?php echo $row['Add-on_Services']; ?></td>
                 <td class="tg-text6"><?php echo $time; ?></td>
                 <td class="buttons">
+                    <?php if ($row['Paid'] != 'Yes'):?>
                     <a href = "calendar_pay.php?ownerid=<?php echo $row['Owners_ID'];?>"> <button id = "icon" type="submit" class="btn-btn-open"><i class="fa-solid fa-cart-shopping"></i></button></a>
+                    <?php endif;?>
                     <a href = "calendar_del.php?deleteid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a>
                     <?php if ($newdate == $today):?>
                     <a href = "calendar_check.php?ownerid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-check"></i></button></a>

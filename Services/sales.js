@@ -39,14 +39,6 @@ const openModal = function () {
 // open modal event
 openModalBtn.addEventListener("click", openModal);
 
-textarea = document.querySelector("#services");
-textarea.addEventListener('input', autoResize, false);
-
-function autoResize() {
-    this.style.height = 'auto';
-    this.style.height = this.scrollHeight + 'px';
-}
-
 function showRefNum(){
     refNum.style.display = 'block';
   }
@@ -65,7 +57,7 @@ function putData () {
   document.getElementById("customer_name").placeholder = oname;
 }
 
-function putData2() {
-  var initContent1 = document.getElementById("#sparesult");
-  var container = document.getElementById("#services");
+function putData2(total) {
+  document.getElementById("total_amount").placeholder = " ";
+  document.getElementById("total_amount").placeholder = total;
 }

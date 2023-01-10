@@ -37,19 +37,20 @@ function printTotal() {
   var total = parseInt(a) + parseInt(b);
   res.append(total);
   con.appendChild(res);
-  var discount = 0;
+  var disc = 0;
   if (a != 0) {
-    discount = document.querySelector('input[name="disc"]:checked').value;
+    disc = document.querySelector('input[name="disc"]:checked').value;
   }
   const con1 = document.getElementById("totalcontainer");
-  var adiscounted = a  - (a/100)*discount;
-  var totalwithdiscount = adiscounted + b;
+  var adiscounted = a  - (a/100)*disc;
+  var totalwithdiscount = parseInt(adiscounted) + parseInt(b);
   con1.setAttribute('value', totalwithdiscount)
 
   if (a!=0) {
     var c = document.getElementById("totalspadiscountedcontainer");
     c.setAttribute ('value', adiscounted);
   }
+  putData2(totalwithdiscount);
 }
 function addToCart() {
     const tcontainer =  document.getElementById("totalspacontainer");
@@ -93,9 +94,6 @@ function addToCart() {
       }
     }
     
-    if (discount == "on") {
-      discount = document.getElementById("manualinput").value;
-    }
     const result = document.createElement("div");
     result.setAttribute("id", "sparesult");
 
@@ -136,7 +134,6 @@ function addToCart() {
     element.appendChild(result);
 
     tcontainer.setAttribute('value', temptotal);
-    putData2();
     printTotal();
   }
 
@@ -231,7 +228,6 @@ function addToCart2() {
   element.appendChild(result);
 
   tcontainer.setAttribute('value', temptotal);
-  putData2();
   printTotal();
 }
 
