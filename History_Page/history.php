@@ -82,10 +82,10 @@
             <input type = "date" id = "todate" name = "todate"> </p>
             <p style = "font-weight: bold; display: inline-block; line-height: 20%;"> Filters &emsp;
                 <div class = "filter1">
-                    <input type = "radio" id = "groomer" name = "filtertype" value = "groomer"> Groomer &emsp; &emsp;
-                    <input type = "radio" id = "service" name = "filtertype" value = "service"> Service
+                    <input type = "radio" id = "groomer" name = "filtertype" value = "groomer" onclick="showlist()"> Groomer &emsp; &emsp;
+                    <input type = "radio" id = "service" name = "filtertype" value = "service" onclick="hidelist()"> Service
                 </div> <br>
-                <div>
+                <div id="groomer-id">
                 <?php include ('history_retrieve.php'); ?>
                     <select class = "custom-select" id = "select_groomer">
                     <option value = "Null" selected></option>
@@ -95,13 +95,16 @@
                       </select>
                 </div>
                 <br>
-            <input type="button" value="Load" onclick = "load()">
+            <input type="button" id="btn-ld" value="Load" onclick="load()">
     </div>
     <?php include ('data_connect.php'); ?>
     <div class = "filterresults">
-        <!--<div class = "Noresults">
+      <div class = "res">
+        <div class = "Noresults">
             <img id = "noresults" src = "../Pictures/no_data.png">
-        </div>-->
+        </div>
+      </div>
+      
     </div>
 </div>
 <script>

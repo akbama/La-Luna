@@ -9,6 +9,7 @@
 </head>
 <body>
 <?php  
+date_default_timezone_set('Asia/Manila');
     $clickeddate = $_POST['clickeddate'];
     $clickeddate = strtotime($clickeddate);
     $dateinput = date('Y/m/d',$clickeddate);
@@ -32,6 +33,7 @@
               ?>
             <tbody>
               <tr> <?php
+              $today = date('Y/m/d');
               $date = new DateTime($row['App_Date']);
               $newdate = $date->format('Y/m/d');
               $time = $date->format('H:i A');
@@ -46,8 +48,9 @@
                 <td class="buttons">
                     <a href = "calendar_pay.php?ownerid=<?php echo $row['Owners_ID'];?>"> <button id = "icon" type="submit" class="btn-btn-open"><i class="fa-solid fa-cart-shopping"></i></button></a>
                     <a href = "calendar_del.php?deleteid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-trash"></i></button></a>
+                    <?php if ($newdate == $today):?>
                     <a href = "calendar_check.php?ownerid=<?php echo $row['Owners_ID']; ?>"><button id = "icon" type="submit"><i class="fa-solid fa-check"></i></button></a>
-                  </td>
+                  <?php endif;?></td>
               </tr>
             </tbody>
             <?php endif; }?>

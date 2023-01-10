@@ -21,7 +21,6 @@ input[type="date"] {
 .filter1 {
     display: inline-block;
     width: 25%;
-    padding-bottom: 0;
 }
 
 input[type="radio"] {
@@ -43,23 +42,23 @@ input[type="radio"]:checked {
 
 .custom-select {
     appearance: none;
-	padding: 5px;
     width: 20%;
-	background-color: #EFEFEF;
-	color: black;
-	border: none;
-	font-family: inherit;
+	  background-color: #EFEFEF;
+	  color: black;
+	  border: none;
+	  font-family: inherit;
     padding-left: 20px;
-	outline: none;
+	  outline: none;
     border-radius: 30px;
     background: url(../Pictures/arrow_down.png) no-repeat right #EFEFEF;
-    background-size: 20px;
-    background-position-x: 160px;
+    background-size: 15px;
+    background-position-x: 95%;
 }
 
-input[type="submit"]{
+#btn-ld
+{
     width: 15%;
-    border-radius: 25px;
+    border-radius: 30px;
     border: none;
     background-color: #F9D95E;
     height: 36px;
@@ -68,8 +67,10 @@ input[type="submit"]{
     box-shadow: 0px 0px 6px #CCCCCC;
 }
 
-input[type="submit"]:hover{
+#btn-ld:hover
+{
     opacity: 0.8;
+    color: #EFEFEF;
 }
 
 .filterresults {
@@ -79,6 +80,7 @@ input[type="submit"]:hover{
     border-radius: 50px;
     background-color: white;
     box-shadow: 0px 0px 6px #CCCCCC;
+    padding-top: 5%;
 }
 
 #noresults {
@@ -94,6 +96,33 @@ input[type="submit"]:hover{
     align-items: center;
     height: 100%;
 }
+
+.tg th
+{
+  align-content: center;
+  text-align: center;
+  width: 6%;
+}
+
+.tg td
+{
+  align-content: center;
+  text-align: center;
+  width: 6%;
+}
+
+.res
+{
+  padding-bottom: 0;
+}
+
+#total
+{
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
 
 /* SIDEBAR NAV */
 
@@ -253,4 +282,19 @@ a.active-page > i{
 
 .sidebar:hover a.active-page > i{
   color: #FADA5E;
+}
+
+.res {
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.total {
+  height:10%;
+  width: 100%;
+}
+
+.tg {
+  width: 100%;
 }
