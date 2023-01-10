@@ -13,3 +13,14 @@ function load() {
         value4: d
       });
 }
+
+function hidelist() {
+  var g = document.getElementById("groomer-id");
+    g.style.opacity = 0;
+}
+
+
+function showlist() {
+  var g = document.getElementById("groomer-id");
+    g.style.opacity = 1;
+}
