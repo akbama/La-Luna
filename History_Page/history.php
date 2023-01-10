@@ -78,7 +78,7 @@
     <p id = "title">History</h1>
     <div class = "filter">
             <p style = "font-weight: bold;"> Data from
-            <input type = "date" id = "fromydate" name = "fromdate"> to 
+            <input type = "date" id = "fromydate" name = "fromdate" oninput ="rangedate()"> to 
             <input type = "date" id = "todate" name = "todate"> </p>
             <p style = "font-weight: bold; display: inline-block; line-height: 20%;"> Filters &emsp;
                 <div class = "filter1">
@@ -116,6 +116,13 @@ $(document).ready(function(){
 });
 </script>
 <script src = "history.js"></script>
+<script type="text/javascript">
+  function rangedate() {
+    var from = document.getElementById("fromydate").value;
+    document.getElementsByName("todate")[0].min = from;
+  }
+    
+</script>
 </body>
 </html>
 <?php
