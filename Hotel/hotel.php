@@ -132,6 +132,7 @@
         </div>
         <hr>
         <div class="contents">
+          <div class ="allcontents">
           <table class="tg">
             <tbody>
             <tr>
@@ -159,15 +160,16 @@
                 <td class="tg-text7"><?php echo $row['Check_In_Date']; ?></td>
                 <?php if(strtotime($today) > strtotime($row['Check_Out_Date'])){
                   echo '<td class="tg-text7" style="color: #bb0a1e">' .$row['Check_Out_Date']. '</td>';
-                  echo '<td><button style="background-color: #bb0a1e; color: white" class="button"  id="tg-button">Checkout</button>';
+                  echo '<td><button style="background-color: #bb0a1e; color: white" class="button" type = "submit" id="tg-button">Checkout</button>';
                 }else{
                   echo '<td class="tg-text7" style="color: black">' . $row['Check_Out_Date'] . '</td>';
-                  echo '<td><button style="background-color: #FADA5E" class="button"  id="tg-button">Checkout</button>';
+                  echo '<td><button style="background-color: #FADA5E" class="button" type = "submit" id="tg-button">Checkout</button>';
                 }?>
               </tr>
             </tbody>
             <?php }?>
             </table>
+              </div>
         </div>
       </div>
     <!-- DAYCARE -->
@@ -178,14 +180,14 @@
         </div>
         <hr>
         <div class="contents2">
+          <div class = "allcontents">
           <table class="tg2">
             <tbody>
             <tr>
             <th>Owner</th>
             <th>Pet</th>
             <th>Contact</th>
-            <th>Stay Type</th>
-            <th>Room Type</th>
+            <th>Pet Size </th>
             <th>Actions</th>
           </tr>
             <?php 
@@ -196,14 +198,14 @@
                 <td class="tg2-text2"><?php echo $row['Pets_Name']; ?></td>
                 <td class="tg2-text3"><?php echo $row['Contact_Number']; ?></td>
                 <td class="tg2-text4"><?php echo $row['Pet_Size']; ?></td>
-                    <td><button class="button" id="tg2-button">Checkout</button>
+                <td><a href = "hotel_del.php?deleteid=<?php echo $row['Owners_ID']; ?>"><button class="button" type = "submit" id="tg2-button">Checkout</button></a>
                 </td>
               </tr>
             </tbody>
             <?php }?>
             </table>
         </div>
-      
+              </div>
      
     </div>
 </section>

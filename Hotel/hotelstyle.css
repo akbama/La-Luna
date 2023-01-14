@@ -145,6 +145,11 @@ hr {
     margin-bottom: 2%;
 }
 
+.allcontents {
+  overflow: auto;
+  height: 70%;
+}
+
 .tg  
 {
     border-collapse:collapse;
